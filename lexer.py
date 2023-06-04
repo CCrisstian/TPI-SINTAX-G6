@@ -5,6 +5,7 @@ import codecs
 import os
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
+from termcolor import colored
 
 
 #definimos una lista con los tokens a utilizar
@@ -102,443 +103,454 @@ def t_newline(t):
 #Definicion de la expresion regular del tag del dockbook
 def t_DOCTYPE(t):
     r'<\!DOCTYPE\s+article\s*\>'
-    print("DOCKBOOK")
+    print(colored('Se encontro el token DOCBOOK' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Abrir articulo
 def t_OPART(t):
     r'<article>'
-    print("<article>")
+    print(colored('Se encontro el token <article>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar articulo
 def t_CLART(t):
     r'</article>'
-    print("</article>")
+    print(colored('Se encontro el token </article>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Abrir section
 def t_OPSECT(t):
     r'<section>'
-    print("<section>")
+    print(colored('Se encontro el token <section>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar section
 def t_CLSECT(t):
     r'</section>'
-    print("</section>")
+    print(colored('Se encontro el token </section>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Abrir simlpesection
 def t_OPSSECT(t):
     r'<simplesect>'
-    print("<simplesect>")
+    print(colored('Se encontro el token <simplesect>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Abrir simplesection
 def t_CLSSECT(t):
-    r'</simplesec>'
-    print("</simplesect>")
+    r'</simplesect>'
+    print(colored('Se encontro el token </simplesect>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Abrir info
 def t_OPINFO(t):
     r'<info>'
-    print("<info>")
+    print(colored('Se encontro el token <info>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar info
 def t_CLINFO(t):
     r'</info>'
-    print("</info>")
+    print(colored('Se encontro el token </info>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Abrir abstract
 def t_OPABST(t):
     r'<abstract>'
-    print("<abstract>")
+    print(colored('Se encontro el token <abstract>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar abstract
 def t_CLABST(t):
     r'</abstract>'
-    print("</abstract>")
+    print(colored('Se encontro el token </abstract>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Abrir address
 def t_OPADD(t):
     r'<address>'
-    print("<address>")
+    print(colored('Se encontro el token <address>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar address
 def t_CLADD(t):
     r'</address>'
-    print("</address>")
+    print(colored('Se encontro el token </address>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Abrir author
 def t_OPAUTHOR(t):
     r'<author>'
-    print("<author>")
+    print(colored('Se encontro el token <author>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar author
 def t_CLAUTHOR(t):
     r'</author>'
-    print("</author>")
+    print(colored('Se encontro el token </author>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Abrir copyright
 def t_OPCOPY(t):
     r'<copyright>'
-    print("<copyright>")
+    print(colored('Se encontro el token <copyright>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar copyright
 def t_CLCOPY(t):
     r'</copyright>'
-    print("</copyright>")
+    print(colored('Se encontro el token </copyright>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir title
 def t_OPTIT(t):
     r'<title>'
-    print("<title>")
+    print(colored('Se encontro el token <title>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar title
 def t_CLTIT(t):
     r'</title>'
-    print("</title>")
+    print(colored('Se encontro el token </title>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir simpara
 def t_OPSPARA(t):
     r'<simpara>'
-    print("<simpara>")
+    print(colored('Se encontro el token <simpara>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar simpara
 def t_CLSPARA(t):
     r'</simpara>'
-    print("</simpara>")
+    print(colored('Se encontro el token </simpara>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir emphasis
 def t_OPEMPH(t):
     r'<emphasis>'
-    print("<emphasis>")
+    print(colored('Se encontro el token <emphasis>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar emphasis
 def t_CLEMPH(t):
     r'</emphasis>'
-    print("</emphasis>")
+    print(colored('Se encontro el token </emphasis>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir comment
 def t_OPCOM(t):
     r'<comment>'
-    print("<comment>")
+    print(colored('Se encontro el token <comment>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar comment
 def t_CLCOM(t):
     r'</comment>'
-    print("</comment>")
+    print(colored('Se encontro el token </comment>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir para
 def t_OPPARA(t):
     r'<para>'
-    print("<para>")
+    print(colored('Se encontro el token <para>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar para
 def t_CLPARA(t):
     r'</para>'
-    print("</para>")
+    print(colored('Se encontro el token </para>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir firstname
 def t_OPFNAME(t):
     r'<firstname>'
-    print("<firstname>")
+    print(colored('Se encontro el token <firstname>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar firstname
 def t_CLFNAME(t):
     r'</firstname>'
-    print("</firstname>")
+    print(colored('Se encontro el token </firstname>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir surname
 def t_OPSNAME(t):
     r'<surname>'
-    print("<surname>")
+    print(colored('Se encontro el token <surname>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar surname
 def t_CLSMANE(t):
     r'</surname>'
-    print("</surname>")
+    print(colored('Se encontro el token </surname>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir street
 def t_OPSTREET(t):
     r'<street>'
-    print("<street>")
+    print(colored('Se encontro el token <street>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar street
 def t_CLSTREET(t):
     r'</street>'
-    print("</street>")
+    print(colored('Se encontro el token </street>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir city
 def t_OPCITY(t):
     r'<city>'
-    print("<city>")
+    print(colored('Se encontro el token <city>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar city
 def t_CLCITY(t):
     r'</city>'
-    print("</city>")
+    print(colored('Se encontro el token </city>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir state
 def t_OPSTATE(t):
     r'<state>'
-    print("<state>")
+    print(colored('Se encontro el token <state>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar state
 def t_CLSTATE(t):
     r'</state>'
-    print("</state>")
+    print(colored('Se encontro el token </state>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir phone
 def t_OPPHONE(t):
     r'<phone>'
-    print("<phone>")
+    print(colored('Se encontro el token <phone>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar phone
 def t_CLPHONE(t):
     r'</phone>'
-    print("</phone>")
+    print(colored('Se encontro el token </phone>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir email
 def t_OPEMAIL(t):
     r'<email>'
-    print("<email>")
+    print(colored('Se encontro el token <emails>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar email
 def t_CLEMAIL(t):
     r'</email>'
-    print("</email>")
+    print(colored('Se encontro el token </emails>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir date
 def t_OPDATE(t):
     r'<date>'
-    print("<date>")
+    print(colored('Se encontro el token <date>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar date
 def t_CLDATE(t):
     r'</date>'
-    print("</date>")
+    print(colored('Se encontro el token </date>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir year
 def t_OPYEAR(t):
     r'<year>'
-    print("<year>")
+    print(colored('Se encontro el token <year>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar year
 def t_CLYEAR(t):
     r'</year>'
-    print("</year>")
+    print(colored('Se encontro el token </year>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir holder
 def t_OPHOLDER(t):
     r'<holder>'
-    print("<holder>")
+    print(colored('Se encontro el token <holder>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar holder
 def t_CLHOLDER(t):
     r'</holder>'
-    print("</holder>")
+    print(colored('Se encontro el token </holder>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir mediaobject
 def t_OPMOBJ(t):
     r'<mediaobject>'
-    print("<mediaobject>")
+    print(colored('Se encontro el token <mediaobject>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar mediaobject
 def t_CLMOBJ(t):
     r'</mediaobject>'
-    print("</mediaobject>")
+    print(colored('Se encontro el token </mediaobject>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir videoobject
 def t_OPVOBJ(t):
     r'<videoobject>'
-    print("<videoobject>")
+    print(colored('Se encontro el token <videoobject>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar videoobject
 def t_CLVOBJ(t):
     r'</videoobject>'
-    print("</videoobject>")
+    print(colored('Se encontro el token </videoobject>' ,'green'))
     return t
 
 #Definición de 'VIDAT', 'VFORM' PENDIENTE
 
+def t_VIDAT(t):
+    r'<videodata\s+fileref="(?:[^"]+)"\s*/>'
+    print(colored('Se encontro el token <videodata>' ,'green'))
+    return t
+
+
 #Definicion de la expresion regular de Abrir imageobject
 def t_OPIMOBJ(t):
     r'<imageobject>'
-    print("<imageobject>")
+    print(colored('Se encontro el token <imagenobject>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar imageobject
 def t_CLIMOBJ(t):
     r'</imageobject>'
-    print("</imageobject>")
+    print(colored('Se encontro el token </imagenobject>' ,'green'))
     return t
 
 #Definición de 'IMDATA', 'IMFORM' PENDIENTE
 
+def t_IMDATA(t):
+    r'<imagedata\s+fileref="(?:[^"]+)"\s*/>'
+    print(colored('Se encontro el token <imagendata>' ,'green'))
+    return t
+
 #Definicion de la expresion regular de Abrir itemizedlist
 def t_OPILIST(t):
     r'<itemizedlist>'
-    print("<itemizedlist>")
+    print(colored('Se encontro el token <itemizedlist>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar itemizedlist
 def t_CLILIST(t):
     r'</itemizedlist>'
-    print("</itemizedlist>")
+    print(colored('Se encontro el token </itemizedlist>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir listitem
 def t_OPLITEM(t):
     r'<listitem>'
-    print("<listitem>")
+    print(colored('Se encontro el token <listitem>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar listitem
 def t_CLLITEM(t):
     r'</listitem>'
-    print("</listitem>")
+    print(colored('Se encontro el token </listitem>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir informaltable
 def t_OPINTAB(t):
     r'<informaltable>'
-    print("<informaltable>")
+    print(colored('Se encontro el token <informaltable>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar informaltable
 def t_CLINTAB(t):
     r'</informaltable>'
-    print("</informaltable>")
+    print(colored('Se encontro el token </informaltable>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir tgroup
 def t_OPTGROUP(t):
     r'<tgroup>'
-    print("<tgroup>")
+    print(colored('Se encontro el token <tgroup>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar tgroup
 def t_CLGROUP(t):
     r'</tgroup>'
-    print("</tgroup>")
+    print(colored('Se encontro el token </tgroup>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir thead
 def t_OPHEAD(t):
     r'<thead>'
-    print("<thead>")
+    print(colored('Se encontro el token <thead>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar thead
 def t_CLHEAD(t):
     r'</thead>'
-    print("</thead>")
+    print(colored('Se encontro el token </thead>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir tfoot
 def t_OPFOOT(t):
     r'<tfoot>'
-    print("<tfoot>")
+    print(colored('Se encontro el token <tfoot>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar tfoot
 def t_CLFOOT(t):
     r'</tfoot>'
-    print("</tfoot>")
+    print(colored('Se encontro el token </tfoot>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir tbody
 def t_OPBODY(t):
     r'<tbody>'
-    print("<tbody>")
+    print(colored('Se encontro el token <tbody>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar tbody
 def t_CLBODY(t):
     r'</tbody>'
-    print("</tbody>")
+    print(colored('Se encontro el token </tbody>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir row
 def t_OPROW(t):
     r'<row>'
-    print("<row>")
+    print(colored('Se encontro el token <row>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar row
 def t_CLROW(t):
     r'</row>'
-    print("</row>")
+    print(colored('Se encontro el token </row>' ,'green'))
     return t
 
 #Definicion de la expresion regular de Abrir entry
 def t_OPENTRY(t):
     r'<entry>'
-    print("<entry>")
+    print(colored('Se encontro el token <entry>' ,'green'))
     return t 
 
 #Definicion de la expresion regular de Cerrar entry
 def t_CLENTRY(t):
     r'</entry>'
-    print("</entry>")
+    print(colored('Se encontro el token </entry>' ,'green'))
     return t
 
 #Definicion de la expresion regular de link PENDIENTE
 def t_OPLINK(t):
     r'<(link)(\s+xlink:href=")((https?|ftps?)://[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?)"'
-    print("link")
+    print(colored('Se encontro el token LINK' ,'green'))
     return(t)
 
 
 def t_CLLINK(t):
     r'</link>'
-    print("</link>")
+    print(colored('Se encontro el token </link>' ,'green'))
     return(t)
 
 #Definicion de la expresion regular de un texto
@@ -547,24 +559,25 @@ def t_TEXTO(t):
     if t.value.upper() in tokens:
         t.value = t.value.upper()
         t.type= t.value
-    print("TEXTO")
+    print(colored('Se encontro el token TEXTO' ,'green'))
     return t
 
 #Definicion de la expresion regular de un numero
 def t_NUMERO(t):
     r'[0-9][0-9]*'
-    print("NUMERO")
+    print(colored('Se encontro el token NUMERO' ,'green'))
     return t
 
 def t_error(t):
-    print("Error lexico en la linea", str(t.lineno))
+    print(colored("Error lexico en la linea", "red"), str(t.lineno))
     t.lexer.skip(1)
 
 
 print ("Hola este es el analizador Lexico")
-# Crear una ventana de Tkinter oculta
+ # Crear una ventana de Tkinter oculta
 ventana = Tk()
 ventana.withdraw()
+
 def opcion1():
     print("Has seleccionado elegir un archivo desde el equipo.")
     # Abrir el explorador de archivos y obtener la ruta del archivo seleccionado
@@ -572,14 +585,14 @@ def opcion1():
     fp=codecs.open(ruta_archivo,"r","UTF-8")
     cad=fp.read()
     fp.close
-    analizador = lex.lex()
+    analizador = lex.lex(reflags=re.IGNORECASE)
     analizador.input(cad)  
     print("\nLista de tokens\n")
-
     while True:
         tok = analizador.token()
         if not tok : break
-        print(tok) 
+        print(colored('Con el lexema: \n', 'green'),tok) 
+
 
 def opcion2():
     print("Has seleccionado ingresarlo por teclado.")
@@ -589,20 +602,20 @@ def opcion2():
             break
         cad=''
         cad=cad+linea
-        analizador = lex.lex()
+        analizador = lex.lex(reflags=re.IGNORECASE)
         analizador.input(cad)  
         print("\nLista de tokens\n")
-
         while True:
             tok = analizador.token()
             if not tok : break
-            print(tok) 
+            print(colored('Con el lexema: \n', 'green'),tok) 
+        
 
 while True:
-    print("MENU")
-    print("1. Elegir un archivo")
+    print('MENU')
+    print('1. Elegir un archivo')
     print("2. Ingresarlo por teclado")
-    print("4. Salir")
+    print("3. Salir")
 
     opcion = input("Selecciona una opción: ")
 
