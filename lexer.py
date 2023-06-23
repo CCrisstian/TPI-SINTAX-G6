@@ -9,7 +9,7 @@ from termcolor import colored
 
 
 #definimos una lista con los tokens a utilizar
-tokens=[
+tokens  =   [
     'TEXTO', #Texto alfanumerico
     'NUMERO',
     'DOCTYPE',
