@@ -543,7 +543,7 @@ def t_CLENTRY(t):
 
 #Definicion de la expresion regular de link PENDIENTE
 def t_OPLINK(t):
-    r'<(link)(\s+xlink:href=")((https?|ftps?)://[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?)"'
+    r'<(link)(\s+xlink:href=)((http?|ftp?|https?|ftps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?)>'
     print(colored('Se encontro el token LINK' ,'green'))
     return(t)
 
