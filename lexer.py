@@ -543,7 +543,7 @@ def t_CLENTRY(t):
 
 #Definicion de la expresion regular de link PENDIENTE
 def t_OPLINK(t):
-    r'<(link)(\s+xlink:href=)((http?|ftp?|https?|ftps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?)>'
+    r'<(link)(\s+xlink:href=)(http?|ftp?|https?|ftps?):\/\/([\w\-])((\.|\:)[\w\-]+)*([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?>'
     print(colored('Se encontro el token LINK' ,'green'))
     return(t)
 
@@ -555,7 +555,7 @@ def t_CLLINK(t):
 
 #Definicion de la expresion regular de un texto
 def t_TEXTO(t):
-    r'([0-9]*[a-zA-Z ,.;#:&?+/()_-][0-9]*[a-zA-Z ,.;#:&?+/()_-]*[0-9]*)'
+    r'([0-9]*[\w,.;#:&?+/()_][0-9]*[\wñáéíóúÁÉÍÓÚ ,.;#:&?+/()_-]*[0-9]*)'
     if t.value.upper() in tokens:
         t.value = t.value.upper()
         t.type= t.value
@@ -623,7 +623,7 @@ while True:
         opcion1()
     elif opcion == "2":
         opcion2()
-    elif opcion == "4":
+    elif opcion == "3":
         print("Saliendo del programa...")
         break
     else:
