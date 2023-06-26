@@ -156,19 +156,17 @@ def p_mediaobject(p):
 | OPMOBJ info videoObject genMediaObj CLMOBJ | OPMOBJ info imageObject genMediaObj CLMOBJ 
 | OPMOBJ videoObject genMediaObj CLMOBJ | OPMOBJ imageObject genMediaObj CLMOBJ'''
 
-def p_videoobject(p):
+def p_videoObject(p):
     '''videoObject : OPVOBJ info videoData CLVOBJ | OPVOBJ videoData CLVOBJ'''
 
-VideoData → <videodata fileref='texto.VideoFormat' />
-
-VideoFormat → MP4 | Ogg | WebM | AVI | MOV
+def p_videoData(p):
+    '''videoData : VIDAT'''
 
 def p_imageobject(p):
     '''imageobject : OPIMOBJ info imageData CLIMOBJ | OPIMOBJ imageData CLIMOBJ'''
 
-ImageData → <imagedata fileref='texto.ImageFormat' />
-
-ImageFormat → PNG | JPEG | GIF | SVG
+def p_imagedata(p):
+    '''imagedata : IMDATA'''
 
 def p_genItemizedList(p):
     '''genItemizedList : listItem | listItem genItemizedList'''
@@ -222,23 +220,3 @@ def p_genEntry(p):
 
 def p_entry(p):
     '''entry : OPENTRY genEntry CLENTRY'''
-
-LINK →<link xlink:href= PROTOCOLO://DOMINIO_GRAL FINAL_URL </link>
-
-FINAL_URL → /RUTA#LOCALIZADOR | /RUTA
-
-PROTOCOLO → http | https | ftp | ftps
-
-DOMINIO_GRAL → DOMINIO:PUERTO | DOMINIO
-
-LOCALIZADOR → texto
-DOMINIO → texto
-RUTA →texto
-
-
-
-
-
-
-
-
