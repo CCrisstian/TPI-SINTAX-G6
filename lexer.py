@@ -406,10 +406,8 @@ def t_CLVOBJ(t):
     print(colored('Se encontro el token </videoobject>' ,'green'))
     return t
 
-#Definición de 'VIDAT', 'VFORM' PENDIENTE
-
 def t_VIDAT(t):
-    r'<videodata\s+fileref="(?:[^"]+)"\s*/>'
+    r'<(videodata)(\s+fileref=)(”|"|\')(http?|ftp?|https?|ftps?|[\w]?):(\\|[\w])+\/([\w])+.(mp4?|ogg?|webm?|avi?|mov?|MP4?|Ogg?|WebM?|AVI?|MOV?)(”|"|\')\s*\/>'
     print(colored('Se encontro el token <videodata>' ,'green'))
     return t
 
@@ -426,10 +424,8 @@ def t_CLIMOBJ(t):
     print(colored('Se encontro el token </imagenobject>' ,'green'))
     return t
 
-#Definición de 'IMDATA', 'IMFORM' PENDIENTE
-
 def t_IMDATA(t):
-    r'<imagedata\s+fileref="(?:[^"]+)"\s*/>'
+    r'<(imagedata)(\s+fileref=)(”|"|\')(http?|ftp?|https?|ftps?|[\w]?):(\\|[\w])+\/([\w])+.(gif?|png?|jpeg?|svg?|GIF?|PNG?|JPEG?|SVG?)(”|"\')\s*\/>'
     print(colored('Se encontro el token <imagendata>' ,'green'))
     return t
 
