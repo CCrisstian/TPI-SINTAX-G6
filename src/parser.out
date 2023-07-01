@@ -1,0 +1,398 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    CLLINK
+    CLSMANE
+    IMFORM
+    OPLINK
+    VFORM
+
+Grammar
+
+Rule 0     S' -> sigma
+Rule 1     sigma -> DOCTYPE docbook
+Rule 2     docbook -> OPART articulo CLART
+Rule 3     articulo -> genArt
+Rule 4     articulo -> info genArt
+Rule 5     articulo -> title genArt
+Rule 6     articulo -> info title genArt
+Rule 7     articulo -> genArt genS
+Rule 8     articulo -> info genArt genS
+Rule 9     articulo -> title genArt genS
+Rule 10    articulo -> info title genArt genS
+Rule 11    articulo -> genArt genSS
+Rule 12    articulo -> info genArt genSS
+Rule 13    articulo -> title genArt genSS
+Rule 14    articulo -> info title genArt genSS
+Rule 15    genArt -> itemizedList genArt
+Rule 16    genArt -> important genArt
+Rule 17    genArt -> para genArt
+Rule 18    genArt -> simPara genArt
+Rule 19    genArt -> address genArt
+Rule 20    genArt -> mediaObject genArt
+Rule 21    genArt -> InformalTable genArt
+Rule 22    genArt -> comment genArt
+Rule 23    genArt -> abstract genArt
+Rule 24    genArt -> itemizedList
+Rule 25    genArt -> important
+Rule 26    genArt -> para
+Rule 27    genArt -> simPara
+Rule 28    genArt -> address
+Rule 29    genArt -> mediaObject
+Rule 30    genArt -> InformalTable
+Rule 31    genArt -> comment
+Rule 32    genArt -> abstract
+Rule 33    genS -> section
+Rule 34    genS -> section genS
+Rule 35    genSS -> simpleSec
+Rule 36    genSS -> simpleSec genSS
+Rule 37    texto -> TEXTO
+Rule 38    numero -> NUMERO
+Rule 39    section -> OPSECT genArt CLSECT
+Rule 40    section -> OPSECT info title genArt CLSECT
+Rule 41    section -> OPSECT info genArt CLSECT
+Rule 42    section -> OPSECT title genArt CLSECT
+Rule 43    section -> OPSECT genArt genS CLSECT
+Rule 44    section -> OPSECT info genArt genS CLSECT
+Rule 45    section -> OPSECT title genArt genS CLSECT
+Rule 46    section -> OPSECT info title genArt genS CLSECT
+Rule 47    section -> OPSECT genArt genSS CLSECT
+Rule 48    section -> OPSECT info genArt genSS CLSECT
+Rule 49    section -> OPSECT title genArt genSS CLSECT
+Rule 50    section -> OPSECT info title genArt genSS CLSECT
+Rule 51    simpleSec -> OPSSECT info title genArt CLSSECT
+Rule 52    simpleSec -> OPSSECT info genArt CLSSECT
+Rule 53    simpleSec -> OPSSECT title genArt CLSSECT
+Rule 54    simpleSec -> OPSSECT genArt CLSSECT
+Rule 55    genInfo -> mediaObject
+Rule 56    genInfo -> abstract
+Rule 57    genInfo -> address
+Rule 58    genInfo -> author
+Rule 59    genInfo -> date
+Rule 60    genInfo -> copyright
+Rule 61    genInfo -> title
+Rule 62    genInfo -> mediaObject genInfo
+Rule 63    genInfo -> abstract genInfo
+Rule 64    genInfo -> address genInfo
+Rule 65    genInfo -> author genInfo
+Rule 66    genInfo -> date genInfo
+Rule 67    genInfo -> copyright genInfo
+Rule 68    genInfo -> title genInfo
+Rule 69    info -> OPINFO genInfo CLINFO
+Rule 70    genAbstr -> para genAbstr
+Rule 71    genAbstr -> simPara genAbstr
+Rule 72    genAbstr -> para
+Rule 73    genAbstr -> simPara
+Rule 74    abstract -> OPABST title genAbstr CLABST
+Rule 75    abstract -> OPABST genAbstr CLABST
+Rule 76    genAddress -> texto
+Rule 77    genAddress -> street
+Rule 78    genAddress -> city
+Rule 79    genAddress -> state
+Rule 80    genAddress -> phone
+Rule 81    genAddress -> email
+Rule 82    genAddress -> texto genAddress
+Rule 83    genAddress -> street genAddress
+Rule 84    genAddress -> city genAddress
+Rule 85    genAddress -> state genAddress
+Rule 86    genAddress -> phone genAddress
+Rule 87    genAddress -> email genAddress
+Rule 88    address -> OPADD genAddress CLADD
+Rule 89    genAuthor -> firstName
+Rule 90    genAuthor -> surname
+Rule 91    genAuthor -> firstName genAuthor
+Rule 92    genAuthor -> surname genAuthor
+Rule 93    author -> OPAUTHOR genAuthor CLAUTHOR
+Rule 94    genCopy -> year
+Rule 95    genCopy -> year genCopy
+Rule 96    genHolder -> holder
+Rule 97    genHolder -> holder genHolder
+Rule 98    copyright -> OPCOPY genCopy CLCOPY
+Rule 99    copyright -> OPCOPY genCopy genHolder CLCOPY
+Rule 100   genTitle -> texto
+Rule 101   genTitle -> emphasis
+Rule 102   genTitle -> link
+Rule 103   genTitle -> email
+Rule 104   genTitle -> texto genTitle
+Rule 105   genTitle -> emphasis genTitle
+Rule 106   genTitle -> link genTitle
+Rule 107   genTitle -> email genTitle
+Rule 108   title -> OPTIT genTitle CLTIT
+Rule 109   genSECL -> texto
+Rule 110   genSECL -> emphasis
+Rule 111   genSECL -> link
+Rule 112   genSECL -> email
+Rule 113   genSECL -> author
+Rule 114   genSECL -> comment
+Rule 115   genSECL -> texto genSECL
+Rule 116   genSECL -> emphasis genSECL
+Rule 117   genSECL -> link genSECL
+Rule 118   genSECL -> email genSECL
+Rule 119   genSECL -> author genSECL
+Rule 120   genSECL -> comment genSECL
+Rule 121   simPara -> OPSPARA genSECL CLSPARA
+Rule 122   emphasis -> OPEMPH genSECL CLEMPH
+Rule 123   comment -> OPCOM genSECL CLCOM
+Rule 124   link -> genSECL link
+Rule 125   link -> genSECL
+Rule 126   genPara -> texto
+Rule 127   genPara -> emphasis
+Rule 128   genPara -> link
+Rule 129   genPara -> email
+Rule 130   genPara -> author
+Rule 131   genPara -> comment
+Rule 132   genPara -> itemizedList
+Rule 133   genPara -> important
+Rule 134   genPara -> address
+Rule 135   genPara -> mediaObject
+Rule 136   genPara -> InformalTable
+Rule 137   genPara -> texto genPara
+Rule 138   genPara -> emphasis genPara
+Rule 139   genPara -> link genPara
+Rule 140   genPara -> email genPara
+Rule 141   genPara -> author genPara
+Rule 142   genPara -> comment genPara
+Rule 143   genPara -> itemizedList genPara
+Rule 144   genPara -> important genPara
+Rule 145   genPara -> address genPara
+Rule 146   genPara -> mediaObject genPara
+Rule 147   genPara -> InformalTable genPara
+Rule 148   para -> OPPARA genPara CLPARA
+Rule 149   important -> title genArt
+Rule 150   important -> genArt
+Rule 151   genFC -> texto
+Rule 152   genFC -> link
+Rule 153   genFC -> emphasis
+Rule 154   genFC -> comment
+Rule 155   genFC -> texto genFC
+Rule 156   genFC -> link genFC
+Rule 157   genFC -> emphasis genFC
+Rule 158   genFC -> comment genFC
+Rule 159   firstName -> OPFNAME genFC CLFNAME
+Rule 160   surname -> OPSNAME genFC CLSNAME
+Rule 161   street -> OPSTREET genFC CLSTREET
+Rule 162   city -> OPCITY genFC CLCITY
+Rule 163   state -> OPSTATE genFC CLSTATE
+Rule 164   phone -> OPPHONE genFC CLPHONE
+Rule 165   email -> OPEMAIL genFC CLEMAIL
+Rule 166   date -> OPDATE genFC CLDATE
+Rule 167   year -> OPYEAR genFC CLYEAR
+Rule 168   holder -> OPHOLDER genFC CLHOLDER
+Rule 169   genMediaObj -> videoObject
+Rule 170   genMediaObj -> imageObject
+Rule 171   genMediaObj -> videoObject genMediaObj
+Rule 172   genMediaObj -> imageObject genMediaObj
+Rule 173   mediaObject -> OPMOBJ info videoObject CLMOBJ
+Rule 174   mediaObject -> OPMOBJ info imageObject CLMOBJ
+Rule 175   mediaObject -> OPMOBJ videoObject CLMOBJ
+Rule 176   mediaObject -> OPMOBJ imageObject CLMOBJ
+Rule 177   mediaObject -> OPMOBJ info videoObject genMediaObj CLMOBJ
+Rule 178   mediaObject -> OPMOBJ info imageObject genMediaObj CLMOBJ
+Rule 179   mediaObject -> OPMOBJ videoObject genMediaObj CLMOBJ
+Rule 180   mediaObject -> OPMOBJ imageObject genMediaObj CLMOBJ
+Rule 181   videoObject -> OPVOBJ info videoData CLVOBJ
+Rule 182   videoObject -> OPVOBJ videoData CLVOBJ
+Rule 183   videoData -> VIDAT
+Rule 184   imageObject -> OPIMOBJ info imageData CLIMOBJ
+Rule 185   imageObject -> OPIMOBJ imageData CLIMOBJ
+Rule 186   imageData -> IMDATA
+Rule 187   genItemizedList -> listItem
+Rule 188   genItemizedList -> listItem genItemizedList
+Rule 189   itemizedList -> OPILIST genItemizedList CLILIST
+Rule 190   genListItem -> itemizedList
+Rule 191   genListItem -> genArt
+Rule 192   genListItem -> itemizedList genListItem
+Rule 193   genListItem -> genArt genListItem
+Rule 194   listItem -> OPLITEM genListItem CLLITEM
+Rule 195   genTGroup -> TGroup
+Rule 196   genTGroup -> TGroup genTGroup
+Rule 197   genInformalTable -> genMediaObj
+Rule 198   genInformalTable -> genTGroup
+Rule 199   InformalTable -> OPINTAB genInformalTable CLINTAB
+Rule 200   TGroup -> OPTGROUP thead tfoot tbody CLTGROUP
+Rule 201   TGroup -> OPTGROUP tfoot tbody CLTGROUP
+Rule 202   TGroup -> OPTGROUP thead tbody CLTGROUP
+Rule 203   TGroup -> OPTGROUP tbody CLTGROUP
+Rule 204   genHFB -> row
+Rule 205   genHFB -> row genHFB
+Rule 206   thead -> OPHEAD genHFB CLHEAD
+Rule 207   tfoot -> OPFOOT genHFB CLFOOT
+Rule 208   tbody -> OPBODY genHFB CLBODY
+Rule 209   genrow -> entry
+Rule 210   genrow -> entrytbl
+Rule 211   genrow -> entry genrow
+Rule 212   genrow -> entrytbl genrow
+Rule 213   row -> OPROW genrow CLROW
+Rule 214   entrytbl -> thead tbody
+Rule 215   entrytbl -> tbody
+Rule 216   genEntry -> texto
+Rule 217   genEntry -> itemizedList
+Rule 218   genEntry -> important
+Rule 219   genEntry -> para
+Rule 220   genEntry -> simPara
+Rule 221   genEntry -> mediaObject
+Rule 222   genEntry -> comment
+Rule 223   genEntry -> abstract
+Rule 224   genEntry -> texto genEntry
+Rule 225   genEntry -> itemizedList genEntry
+Rule 226   genEntry -> important genEntry
+Rule 227   genEntry -> para genEntry
+Rule 228   genEntry -> simPara genEntry
+Rule 229   genEntry -> mediaObject genEntry
+Rule 230   genEntry -> comment genEntry
+Rule 231   genEntry -> abstract genEntry
+Rule 232   entry -> OPENTRY genEntry CLENTRY
+
+Terminals, with rules where they appear
+
+CLABST               : 74 75
+CLADD                : 88
+CLART                : 2
+CLAUTHOR             : 93
+CLBODY               : 208
+CLCITY               : 162
+CLCOM                : 123
+CLCOPY               : 98 99
+CLDATE               : 166
+CLEMAIL              : 165
+CLEMPH               : 122
+CLENTRY              : 232
+CLFNAME              : 159
+CLFOOT               : 207
+CLHEAD               : 206
+CLHOLDER             : 168
+CLILIST              : 189
+CLIMOBJ              : 184 185
+CLINFO               : 69
+CLINTAB              : 199
+CLLINK               : 
+CLLITEM              : 194
+CLMOBJ               : 173 174 175 176 177 178 179 180
+CLPARA               : 148
+CLPHONE              : 164
+CLROW                : 213
+CLSECT               : 39 40 41 42 43 44 45 46 47 48 49 50
+CLSMANE              : 
+CLSPARA              : 121
+CLSSECT              : 51 52 53 54
+CLSTATE              : 163
+CLSTREET             : 161
+CLTGROUP             : 200 201 202 203
+CLTIT                : 108
+CLVOBJ               : 181 182
+CLYEAR               : 167
+DOCTYPE              : 1
+IMDATA               : 186
+IMFORM               : 
+NUMERO               : 38
+OPABST               : 74 75
+OPADD                : 88
+OPART                : 2
+OPAUTHOR             : 93
+OPBODY               : 208
+OPCITY               : 162
+OPCOM                : 123
+OPCOPY               : 98 99
+OPDATE               : 166
+OPEMAIL              : 165
+OPEMPH               : 122
+OPENTRY              : 232
+OPFNAME              : 159
+OPFOOT               : 207
+OPHEAD               : 206
+OPHOLDER             : 168
+OPILIST              : 189
+OPIMOBJ              : 184 185
+OPINFO               : 69
+OPINTAB              : 199
+OPLINK               : 
+OPLITEM              : 194
+OPMOBJ               : 173 174 175 176 177 178 179 180
+OPPARA               : 148
+OPPHONE              : 164
+OPROW                : 213
+OPSECT               : 39 40 41 42 43 44 45 46 47 48 49 50
+OPSNAME              : 160
+OPSPARA              : 121
+OPSSECT              : 51 52 53 54
+OPSTATE              : 163
+OPSTREET             : 161
+OPTGROUP             : 200 201 202 203
+OPTIT                : 108
+OPVOBJ               : 181 182
+OPYEAR               : 167
+TEXTO                : 37
+VFORM                : 
+VIDAT                : 183
+error                : 
+
+Nonterminals, with rules where they appear
+
+CLSNAME              : 160
+InformalTable        : 21 30 136 147
+TGroup               : 195 196
+abstract             : 23 32 56 63 223 231
+address              : 19 28 57 64 134 145
+articulo             : 2
+author               : 58 65 113 119 130 141
+city                 : 78 84
+comment              : 22 31 114 120 131 142 154 158 222 230
+copyright            : 60 67
+date                 : 59 66
+docbook              : 1
+email                : 81 87 103 107 112 118 129 140
+emphasis             : 101 105 110 116 127 138 153 157
+entry                : 209 211
+entrytbl             : 210 212
+firstName            : 89 91
+genAbstr             : 70 71 74 75
+genAddress           : 82 83 84 85 86 87 88
+genArt               : 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 149 150 191 193
+genAuthor            : 91 92 93
+genCopy              : 95 98 99
+genEntry             : 224 225 226 227 228 229 230 231 232
+genFC                : 155 156 157 158 159 160 161 162 163 164 165 166 167 168
+genHFB               : 205 206 207 208
+genHolder            : 97 99
+genInfo              : 62 63 64 65 66 67 68 69
+genInformalTable     : 199
+genItemizedList      : 188 189
+genListItem          : 192 193 194
+genMediaObj          : 171 172 177 178 179 180 197
+genPara              : 137 138 139 140 141 142 143 144 145 146 147 148
+genS                 : 7 8 9 10 34 43 44 45 46
+genSECL              : 115 116 117 118 119 120 121 122 123 124 125
+genSS                : 11 12 13 14 36 47 48 49 50
+genTGroup            : 196 198
+genTitle             : 104 105 106 107 108
+genrow               : 211 212 213
+holder               : 96 97
+imageData            : 184 185
+imageObject          : 170 172 174 176 178 180
+important            : 16 25 133 144 218 226
+info                 : 4 6 8 10 12 14 40 41 44 46 48 50 51 52 173 174 177 178 181 184
+itemizedList         : 15 24 132 143 190 192 217 225
+link                 : 102 106 111 117 124 128 139 152 156
+listItem             : 187 188
+mediaObject          : 20 29 55 62 135 146 221 229
+numero               : 
+para                 : 17 26 70 72 219 227
+phone                : 80 86
+row                  : 204 205
+section              : 33 34
+sigma                : 0
+simPara              : 18 27 71 73 220 228
+simpleSec            : 35 36
+state                : 79 85
+street               : 77 83
+surname              : 90 92
+tbody                : 200 201 202 203 214 215
+texto                : 76 82 100 104 109 115 126 137 151 155 216 224
+tfoot                : 200 201
+thead                : 200 202 214
+title                : 5 6 9 10 13 14 40 42 45 46 49 50 51 53 61 68 74 149
+videoData            : 181 182
+videoObject          : 169 171 173 175 177 179
+year                 : 94 95
+
