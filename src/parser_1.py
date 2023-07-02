@@ -14,12 +14,12 @@ HTML=''
 contadorErrores = 0
 
 def p_sigma(p):
-    '''sigma    :   DOCTYPE docbook '''
+    '''sigma    :   DOCTYPE docBook '''
     global HTML
     HTML= HTML+('<!DOCTYPE html>')
 
-def p_docbook(p):
-    '''docbook  :   OPART articulo  CLART'''
+def p_docBook(p):
+    '''docBook  :   OPART articulo CLART'''
     global HTML
     HTML=HTML+('<html><head></head><body>')
     HTML=HTML+('<p>PAPA</p>')  # Escribir el valor de 'articulo' en el archivo
@@ -27,361 +27,549 @@ def p_docbook(p):
 
 
 def p_articulo(p):
-    '''articulo :   genArt 
-                | info genArt 
-                | title genArt 
-                | info title genArt 
-                | genArt genS 
-                | info genArt genS 
-                | title genArt genS 
-                | info title genArt genS 
-                | genArt genSS 
-                | info genArt genSS 
-                | title genArt genSS 
-                | info title genArt genSS'''
+    '''articulo :  info genArt
+                | title genArt
+                | info title genArt
+                | genArt
+                | info genArt simpleSec
+                | title genArt simpleSec
+                | info title genArt simpleSec
+                | genArt simpleSec
+                | info genArt section
+                | info section
+                | title genArt section
+                | info title genArt section
+                | genArt section'''
 
 def p_genArt(p):
-    '''genArt   : itemizedList genArt 
-                | important genArt 
-                | para genArt 
-                | simPara genArt 
-                | address genArt 
-                | mediaObject genArt 
-                | InformalTable genArt 
-                | comment genArt 
-                | abstract genArt 
-                | itemizedList 
+    '''genArt   : itemizedList  
                 | important 
                 | para 
-                | simPara 
+                | simpara 
                 | address 
-                | mediaObject 
-                | InformalTable 
+                | informalTable 
                 | comment 
-                | abstract'''
-
-def p_genS(p):
-    '''genS : section 
-            | section genS'''
-
-def p_genSS(p):
-    '''genSS    : simpleSec 
-                | simpleSec genSS'''
-
-def p_texto(p):
-    '''texto    :   TEXTO'''  
-
-def p_numero(p):
-    '''numero   :   NUMERO'''
+                | abstract
+                | itemizedList genArt
+                | important genArt
+                | para genArt
+                | simpara genArt
+                | address genArt
+                | informalTable genArt
+                | comment genArt
+                | abstract genArt'''
 
 def p_section(p):
-    '''section  :   OPSECT  genArt  CLSECT 
-                | OPSECT info title genArt   CLSECT 
-                | OPSECT    info    genArt  CLSECT 
-                | OPSECT title   genArt  CLSECT 
-                | OPSECT    genArt  genS    CLSECT 
-                | OPSECT info    genArt  genS CLSECT 
-                | OPSECT    title   genArt  genS    CLSECT 
-                | OPSECT info    title   genArt  genS    CLSECT 
-                | OPSECT    genArt genSS    CLSECT 
-                | OPSECT info genArt genSS   CLSECT 
-                | OPSECT    title   genArt  genSS   CLSECT 
-                | OPSECT info    title   genArt  genSS   CLSECT'''
+    '''section  : OPSECT info genSect1 CLSECT
+                | OPSECT title genSect1 CLSECT
+                | OPSECT info title genSect1 CLSECT
+                | OPSECT genSect1 CLSECT
+                | OPSECT info genSect1 genSect2 CLSECT
+                | OPSECT title genSect1 genSect2 CLSECT
+                | OPSECT info title genSect1 genSect2 CLSECT
+                | OPSECT genSect1 genSect2 CLSECT
+                | OPSECT info genSect1 genSect3 CLSECT
+                | OPSECT title genSect1 genSect3 CLSECT
+                | OPSECT info title genSect1 genSect3 CLSECT
+                | OPSECT genSect1 genSect3 CLSECT'''
+                
+def p_genSect1(p):
+    '''genSect1 : itemizedList  
+                | important 
+                | para
+                | simpara
+                | address
+                | mediaObject
+                | informalTable
+                | comment
+                | abstract
+                | itemizedList genSect1  
+                | important genSect1
+                | para genSect1
+                | simpara genSect1
+                | address genSect1
+                | mediaObject genSect1
+                | informalTable genSect1
+                | comment genSect1
+                | abstract genSect1'''
+            
+def p_genSect2(p):
+    '''genSect2 : simpleSec
+                | simpleSec genSect2'''
+            
+def p_genSect3(p):
+    '''genSect3 : section
+                | section genSect3'''
 
 def p_simpleSec(p):
-    '''simpleSec : OPSSECT info title genArt CLSSECT 
-                 | OPSSECT info genArt CLSSECT 
-                 | OPSSECT title genArt CLSSECT 
-                 | OPSSECT genArt CLSSECT'''
-    
-def p_genInfo(p):
-    '''genInfo : mediaObject 
-               | abstract 
-               | address 
-               | author 
-               | date 
-               | copyright 
-               | title 
-               | mediaObject genInfo 
-               | abstract genInfo 
-               | address genInfo 
-               | author genInfo 
-               | date genInfo 
-               | copyright genInfo 
-               | title genInfo'''
+    '''simpleSec : OPSSECT info genSSect CLSSECT
+                | OPSSECT title genSSect CLSSECT
+                | OPSSECT info title genSSect CLSSECT
+                | OPSSECT genSSect CLSSECT'''
 
-def p_info(p):
-    '''info : OPINFO genInfo CLINFO'''
-
-def p_genAbstr(p):
-    '''genAbstr : para genAbstr 
-                | simPara genAbstr 
-                | para 
-                | simPara'''
-
-def p_abstract(p):
-    '''abstract : OPABST title genAbstr CLABST 
-                | OPABST genAbstr CLABST'''
-
-def p_genAddress(p):
-    '''genAddress : texto 
-                  | street 
-                  | city 
-                  | state 
-                  | phone 
-                  | email 
-                  | texto genAddress 
-                  | street genAddress 
-                  | city genAddress 
-                  | state genAddress 
-                  | phone genAddress 
-                  | email genAddress'''
-
-def p_address(p):
-    '''address : OPADD genAddress CLADD'''
-
-def p_genAuthor(p):
-    '''genAuthor : firstName 
-                 | surname 
-                 | firstName genAuthor 
-                 | surname genAuthor'''
-
-def p_author(p):
-    '''author : OPAUTHOR genAuthor CLAUTHOR'''
-
-def p_genCopy(p):
-    '''genCopy : year 
-               | year genCopy'''
-
-def p_genHolder(p):
-    '''genHolder : holder 
-                 | holder genHolder'''
-
-def p_copyright(p):
-    '''copyright : OPCOPY genCopy CLCOPY 
-                 | OPCOPY genCopy genHolder CLCOPY'''
-
-def p_genTitle(p):
-    '''genTitle : texto 
-                | emphasis 
-                | link 
-                | email 
-                | texto genTitle 
-                | emphasis genTitle 
-                | link genTitle 
-                | email genTitle'''
-
-def p_title(p):
-    '''title : OPTIT genTitle CLTIT'''
-
-def p_genSECL(p):
-    '''genSECL : texto 
-                | emphasis 
-                | link 
-                | email 
-                | author 
-                | comment 
-                | texto genSECL 
-                | emphasis genSECL 
-                | link genSECL 
-                | email  genSECL
-                | author genSECL
-                | comment genSECL'''
-
-def p_simPara(p):
-    '''simPara : OPSPARA genSECL CLSPARA'''
-
-def p_emphasis(p):
-    '''emphasis : OPEMPH genSECL CLEMPH'''
-
-def p_comment(p):
-    '''comment : OPCOM genSECL CLCOM'''
-
-def p_link(p):
-    '''link :  genSECL link 
-            | genSECL'''
- 
-def p_genPara(p):
-    '''genPara : texto 
-                | emphasis 
-                | link 
-                | email 
-                | author 
-                | comment 
-                | itemizedList 
+def p_genSSect(p):
+    '''genSSect    : itemizedList  
                 | important 
+                | para 
+                | simpara 
                 | address 
                 | mediaObject 
-                | InformalTable 
-                | texto genPara 
-                | emphasis genPara 
-                | link genPara 
-                | email genPara 
-                | author genPara 
-                | comment genPara 
-                | itemizedList genPara 
-                | important genPara 
-                | address genPara 
-                | mediaObject genPara 
-                | InformalTable genPara'''
+                | informalTable 
+                | comment 
+                | abstract
+                | itemizedList genSSect
+                | important genSSect
+                | para genSSect
+                | simpara genSSect
+                | address genSSect
+                | mediaObject genSSect
+                | informalTable genSSect
+                | comment genSSect
+                | abstract genSSect'''
+
+def p_geninfo(p):
+    '''geninfo : title  
+                | abstract 
+                | address 
+                | author 
+                | date 
+                | copyright 
+                | mediaObject 
+                | mediaObject geninfo
+                | abstract geninfo
+                | address geninfo
+                | author geninfo
+                | date geninfo
+                | copyright geninfo
+                | title geninfo'''
+
+def p_info(p):
+    '''info : OPINFO geninfo CLINFO'''
+
+def p_abstract(p):
+    '''abstract : OPABST title genAbstr CLABST
+                | OPABST genAbstr CLABST'''
+                
+def p_genAbstr(p):
+    '''genAbstr : para
+                | simpara
+                | para genAbstr
+                | simpara genAbstr'''
+
+def p_address(p):
+    '''address : OPADD CLADD
+                | OPADD genAdd CLADD'''
+
+def p_genAdd(p):
+    '''genAdd : TEXTO
+            | street 
+            | city 
+            | state 
+            | phone 
+            | email 
+            | TEXTO genAdd
+            | street genAdd
+            | city genAdd
+            | state genAdd
+            | phone genAdd
+            | email genAdd'''
+
+def p_author(p):
+    '''author : OPAUTHOR genauthor  CLAUTHOR'''
+
+def p_genauthor (p):
+    '''genauthor  : firstName 
+                | surName 
+                | firstName genauthor 
+                | surName genauthor'''
+
+def p_copyright(p):
+    '''copyright : OPCOPY genCopy1 CLCOPY
+                | OPCOPY genCopy1 genCopy2 CLCOPY'''
+
+def p_genCopy1(p):
+    '''genCopy1 : year
+                | year genCopy1'''
+
+def p_genCopy2(p):
+    '''genCopy2 : holder 
+                | holder genCopy2'''
+
+def p_title(p):
+    '''title : OPTIT gentitle CLTIT'''
+    
+def p_gentitle(p):
+    '''gentitle : TEXTO 
+                | emphasis 
+                | link 
+                | email
+                | TEXTO gentitle
+                | emphasis gentitle
+                | link gentitle
+                | email gentitle'''
+
+def p_simpara(p):
+    '''simpara : OPSPARA genSpara CLSPARA'''
+
+def p_genSpara(p):
+    '''genSpara : TEXTO 
+                | emphasis 
+                | link 
+                | email
+                | author
+                | comment
+                | TEXTO genSpara
+                | emphasis genSpara
+                | link genSpara
+                | email genSpara
+                | author genSpara
+                | comment genSpara'''
+
+def p_emphasis(p):
+    '''emphasis : OPEMPH genEmp CLEMPH'''
+
+def p_genEmp(p):
+    '''genEmp : TEXTO 
+            | emphasis 
+            | link 
+            | email
+            | author
+            | comment
+            | TEXTO genEmp
+            | emphasis genEmp
+            | link genEmp
+            | email genEmp
+            | author genEmp
+            | comment genEmp'''
+
+def p_comment(p):
+    '''comment : OPCOM genCom CLCOM'''
+
+def p_genCom(p):
+    '''genCom : TEXTO 
+            | emphasis 
+            | link 
+            | email
+            | author
+            | comment
+            | TEXTO genCom
+            | emphasis genCom
+            | link genCom
+            | email genCom
+            | author genCom
+            | comment genCom'''
+
+def p_link(p):
+    '''link :  OPLINK genlink CLLINK'''
+
+def p_genlink(p):
+    '''genlink : TEXTO 
+            | emphasis 
+            | link 
+            | email
+            | author
+            | comment
+            | TEXTO genlink
+            | emphasis genlink
+            | link genlink
+            | email genlink
+            | author genlink
+            | comment genlink'''
 
 def p_para(p):
-    '''para : OPPARA genPara CLPARA'''
+    '''para : OPPARA genpara CLPARA'''
+
+def p_genpara(p):
+    '''genpara : TEXTO 
+            | emphasis 
+            | link 
+            | email
+            | author
+            | comment
+            | itemizedList 
+            | important 
+            | address 
+            | mediaObject 
+            | informalTable
+            | TEXTO genpara
+            | emphasis genpara
+            | link genpara
+            | email genpara
+            | author genpara
+            | comment genpara
+            | itemizedList genpara
+            | important genpara
+            | address genpara
+            | mediaObject genpara
+            | informalTable genpara'''
 
 def p_important(p):
-    '''important : title genArt 
-                 | genArt'''
+    '''important : OPIMPORT title genImport CLIMPORT
+                | OPIMPORT genImport CLIMPORT'''
 
-def p_genFC(p):
-    '''genFC : texto 
-             | link 
-             | emphasis 
-             | comment 
-             | texto genFC 
-             | link genFC 
-             | emphasis genFC 
-             | comment genFC '''
+def p_genImport(p):
+    '''genImport : itemizedList
+                | important
+                | para
+                | simpara
+                | address
+                | mediaObject 
+                | informalTable
+                | comment
+                | abstract
+                | itemizedList genImport
+                | important genImport
+                | para genImport
+                | simpara genImport
+                | address genImport
+                | mediaObject genImport
+                | informalTable genImport
+                | comment genImport
+                | abstract genImport'''
 
 def p_firstName(p):
-    '''firstName : OPFNAME genFC CLFNAME'''
+    '''firstName : OPFNAME genFN CLFNAME'''
+    
+def p_genFN(p):
+    '''genFN : TEXTO
+            | link 
+            | emphasis 
+            | comment
+            | TEXTO genFN
+            | link genFN
+            | emphasis genFN 
+            | comment genFN'''
 
-def p_surname(p):
-    '''surname : OPSNAME genFC CLSMANE'''
+def p_surName(p):
+    '''surName : OPSNAME genSN CLSMANE'''
+    
+def p_genSN(p):
+    '''genSN : TEXTO
+            | link 
+            | emphasis 
+            | comment
+            | TEXTO genSN
+            | link genSN
+            | emphasis genSN
+            | comment genSN'''
 
 def p_street(p):
-    '''street : OPSTREET genFC CLSTREET'''
+    '''street : OPSTREET genstreet CLSTREET'''
+
+def p_genstreet(p):
+    '''genstreet : TEXTO
+                | link 
+                | emphasis 
+                | comment
+                | TEXTO genstreet
+                | link genstreet
+                | emphasis genstreet
+                | comment genstreet'''
 
 def p_city(p):
-    '''city : OPCITY genFC CLCITY'''
+    '''city : OPCITY gencity CLCITY'''
+    
+def p_gencity(p):
+    '''gencity : TEXTO
+            | link 
+            | emphasis 
+            | comment
+            | TEXTO gencity
+            | link gencity
+            | emphasis gencity
+            | comment gencity'''
 
 def p_state(p):
-    '''state : OPSTATE genFC CLSTATE'''
+    '''state : OPSTATE genSate CLSTATE'''
 
+def p_genSate(p):
+    '''genSate : TEXTO
+            | link 
+            | emphasis 
+            | comment
+            | TEXTO genSate
+            | link genSate
+            | emphasis genSate
+            | comment genSate'''
+            
 def p_phone(p):
-    '''phone : OPPHONE genFC CLPHONE'''
-
+    '''phone : OPPHONE genphone CLPHONE'''
+    
+def p_genphone(p):
+    '''genphone : TEXTO
+                | link 
+                | emphasis 
+                | comment
+                | TEXTO genphone
+                | link genphone
+                | emphasis genphone
+                | comment genphone'''
+            
 def p_email(p):
-    '''email : OPEMAIL genFC CLEMAIL'''
+    '''email : OPEMAIL  genemail CLEMAIL'''
+
+def p_genemail(p):
+    '''genemail : TEXTO
+                | link 
+                | emphasis 
+                | comment
+                | TEXTO genemail
+                | link genemail
+                | emphasis genemail
+                | comment genemail'''
 
 def p_date(p):
-    '''date : OPDATE genFC CLDATE'''
+    '''date : OPDATE  gendate CLDATE'''
+
+def p_gendate(p):
+    '''gendate : TEXTO
+            | link 
+            | emphasis 
+            | comment
+            | TEXTO gendate
+            | link gendate
+            | emphasis gendate
+            | comment gendate'''
 
 def p_year(p):
-    '''year : OPYEAR genFC CLYEAR'''
+    '''year : OPYEAR  genyear CLYEAR'''
+
+def p_genyear(p):
+    '''genyear : TEXTO
+            | link 
+            | emphasis 
+            | comment
+            | TEXTO genyear
+            | link genyear
+            | emphasis genyear
+            | comment genyear'''
 
 def p_holder(p):
-    '''holder : OPHOLDER genFC CLHOLDER'''
+    '''holder : OPHOLDER  genholder CLHOLDER'''
 
-def p_genMediaObj(p):
-    '''genMediaObj : videoObject 
-                    | imageObject 
-                    | videoObject genMediaObj 
-                    | imageObject genMediaObj'''
+def p_genholder(p):
+    '''genholder : TEXTO
+                | link 
+                | emphasis 
+                | comment
+                | TEXTO genholder
+                | link genholder
+                | emphasis genholder
+                | comment genholder'''
 
 def p_mediaObject(p):
-    '''mediaObject : OPMOBJ info videoObject CLMOBJ 
-                    | OPMOBJ info imageObject CLMOBJ 
-                    | OPMOBJ videoObject CLMOBJ 
-                    | OPMOBJ imageObject CLMOBJ 
-                    | OPMOBJ info videoObject genMediaObj CLMOBJ 
-                    | OPMOBJ info imageObject genMediaObj CLMOBJ 
-                    | OPMOBJ videoObject genMediaObj CLMOBJ 
-                    | OPMOBJ imageObject genMediaObj CLMOBJ'''
+    '''mediaObject : OPMOBJ info videoObject CLMOBJ
+                | OPMOBJ info imageObject CLMOBJ
+                | OPMOBJ videoObject CLMOBJ
+                | OPMOBJ imageObject CLMOBJ
+                | OPMOBJ info videoObject genMO CLMOBJ
+                | OPMOBJ info imageObject genMO CLMOBJ
+                | OPMOBJ videoObject genMO CLMOBJ
+                | OPMOBJ imageObject genMO CLMOBJ'''
+
+def p_genMO(p):
+    '''genMO : videoObject
+                    | imageObject
+                    | videoObject genMO
+                    | imageObject genMO'''
 
 def p_videoObject(p):
-    '''videoObject : OPVOBJ info videoData CLVOBJ 
-                    | OPVOBJ videoData CLVOBJ'''
+    '''videoObject : OPVOBJ info CLVOBJ
+                | OPVOBJ VIDAT CLVOBJ
+                | OPVOBJ info VIDAT CLVOBJ'''
 
-def p_videoData(p):
-    '''videoData : VIDAT'''
+def p_imageObject (p):
+    '''imageObject  : OPIMOBJ info CLIMOBJ
+                    | OPIMOBJ IMDATA CLIMOBJ
+                    | OPIMOBJ info IMDATA CLIMOBJ'''
 
-def p_imageObject(p):
-    '''imageObject : OPIMOBJ info imageData CLIMOBJ 
-                    | OPIMOBJ imageData CLIMOBJ'''
+def p_itemizedList(p):
+    '''itemizedList :  OPILIST genIList CLILIST'''
 
-def p_imageData(p):
-    '''imageData : IMDATA'''
+def p_genIList(p):
+    '''genIList : listItem
+                | listItem genIList'''
 
-def p_genItemizedList(p):
-    '''genItemizedList : listItem 
-                        | listItem genItemizedList'''
+def p_listItem(p):
+    '''listItem : OPLITEM genlistItem CLLITEM'''
+    
+def p_genlistItem(p):
+    '''genlistItem : itemizedList
+                | important
+                | para
+                | simpara
+                | address
+                | mediaObject
+                | informalTable
+                | comment
+                | abstract
+                | itemizedList genlistItem
+                | important genlistItem
+                | para genlistItem
+                | simpara genlistItem
+                | address genlistItem
+                | mediaObject genlistItem
+                | informalTable genlistItem
+                | comment genlistItem
+                | abstract genlistItem'''
 
-def p_itemizedlist(p):
-    '''itemizedList :  OPILIST genItemizedList CLILIST'''
+def p_informalTable(p):
+    '''informalTable : OPINTAB genIT1 CLINTAB
+                    | OPINTAB genIT2 CLINTAB'''
 
-def p_genListItem(p):
-    '''genListItem : itemizedList  
-                    | genArt   
-                    | itemizedList genListItem 
-                    | genArt genListItem '''
+def p_genIT1 (p):
+    '''genIT1  : address
+                | address genIT1'''
+                
+def p_genIT2 (p):
+    '''genIT2  : tGroup
+            | tGroup genIT2'''
 
-def p_listitem(p):
-    '''listItem : OPLITEM genListItem CLLITEM'''
-
-def p_genTGroup(p):
-    '''genTGroup : TGroup 
-                 | TGroup genTGroup'''
-
-def p_genInformalTable(p):
-    '''genInformalTable : genMediaObj 
-                        | genTGroup'''
-
-def p_InformalTable(p):
-    '''InformalTable : OPINTAB genInformalTable CLINTAB'''
-
-def p_Tgroup(p):
-    '''TGroup : OPTGROUP thead tfoot tbody CLTGROUP 
-                | OPTGROUP tfoot tbody CLTGROUP 
-                | OPTGROUP thead tbody CLTGROUP 
-                | OPTGROUP tbody CLTGROUP'''
-
-def p_genHFB(p):
-    '''genHFB : row 
-            | row genHFB'''
-
+def p_tGroup(p):
+    '''tGroup : OPTGROUP thead CLTGROUP
+            | OPTGROUP tfoot CLTGROUP
+            | OPTGROUP tbody CLTGROUP'''
+                       
 def p_thead(p):
     '''thead : OPHEAD genHFB CLHEAD'''
 
 def p_tfoot(p):
     '''tfoot : OPFOOT genHFB CLFOOT'''
-
+            
 def p_tbody(p):
     '''tbody : OPBODY genHFB CLBODY'''
 
-def p_genrow(p):
-    '''genrow : entry 
-                | entrytbl 
-                | entry genrow 
-                | entrytbl genrow'''
-
+def p_genHFB(p):
+    '''genHFB : row
+            | row genHFB'''
+            
 def p_row(p):
     '''row : OPROW genrow CLROW'''
+    
+def p_genrow(p):
+    '''genrow : entry
+            | entry genrow'''
 
-def p_entrytbl(p):
-    '''entrytbl : thead tbody 
-                | tbody'''
-
-def p_genEntry(p):
-    '''genEntry : texto 
+def p_entry(p):
+    '''entry : OPENTRY genentry CLENTRY'''
+    
+def p_genentry(p):
+    '''genentry : TEXTO 
                 | itemizedList 
                 | important 
                 | para 
-                | simPara 
-                | mediaObject 
+                | simpara 
+                | address 
                 | comment 
                 | abstract 
-                | texto genEntry 
-                | itemizedList genEntry 
-                | important genEntry 
-                | para genEntry 
-                | simPara genEntry 
-                | mediaObject genEntry 
-                | comment genEntry 
-                | abstract genEntry'''
-
-def p_entry(p):
-    '''entry : OPENTRY genEntry CLENTRY'''
-
+                | TEXTO genentry
+                | itemizedList genentry
+                | important genentry
+                | para genentry
+                | simpara genentry
+                | address genentry
+                | comment genentry
+                | abstract genentry'''
 
 def p_error(p):
     # p regresa como un objeto del Lexer.

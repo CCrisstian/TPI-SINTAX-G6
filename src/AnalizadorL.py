@@ -63,11 +63,9 @@ tokens  =   [
     'OPVOBJ', #VIDEO  OBJECT
     'CLVOBJ',
     'VIDAT', #VIDEO DATA
-    'VFORM', #VIDEO FORMATO
     'OPIMOBJ', #IMAGEN OBJECT
     'CLIMOBJ',
     'IMDATA', #IMAGEN DATA
-    'IMFORM', #IMAGEN FORMAT
     'OPILIST', #ITEMIZED LIST
     'CLILIST',
     'OPLITEM', #LIST ITEM
@@ -88,6 +86,8 @@ tokens  =   [
     'CLENTRY',
     'OPLINK',
     'CLLINK',
+    'OPIMPORT',
+    'CLIMPORT'
 ]
 
 #tokens especiales
@@ -561,6 +561,16 @@ def t_TEXTO(t):
 def t_NUMERO(t):
     r'[0-9][0-9]*'
     print(colored('Se encontro el token NUMERO' ,'green'))
+    return t
+
+def t_OPIMPORT(t):
+    r'<important>'
+    print(colored('Se encontro el token OPIMPORT' ,'green'))
+    return t
+
+def t_CLIMPORT(t):
+    r'</important>'
+    print(colored('Se encontro el token CLIMPORT' ,'green'))
     return t
 
 def t_error(t):
