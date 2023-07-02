@@ -16,13 +16,13 @@ contadorErrores = 0
 def p_sigma(p):
     '''sigma    :   DOCTYPE docBook '''
     global HTML
-    HTML= HTML+('<!DOCTYPE html>')
+    HTML= HTML+'<!DOCTYPE html>'
 
 def p_docBook(p):
     '''docBook  :   OPART articulo CLART'''
     global HTML
-    HTML=HTML+('<html><head></head><body>')
-    HTML=HTML+('<p>PAPA</p>')  # Escribir el valor de 'articulo' en el archivo
+    HTML=HTML+'<html><head></head><body>'
+    HTML=HTML+str(p[2])  # Escribir el valor de 'articulo' en el archivo
     HTML+='\n\n</body></html>'
 
 
@@ -40,6 +40,17 @@ def p_articulo(p):
                 | title genArt section
                 | info title genArt section
                 | genArt section'''
+    global HTML       
+    if (p[1]=='info') & (p[2]=='genArt'):
+        HTML = HTML+str(p[1])
+        HTML = HTML+str(p[2])
+    elif p[1]=='title':
+        HTML = HTML+'<h1>'
+        HTML = HTML+str(p[1])
+        HTML = HTML+'</h1>'
+
+
+
 
 def p_genArt(p):
     '''genArt   : itemizedList  
@@ -197,6 +208,8 @@ def p_genCopy2(p):
 
 def p_title(p):
     '''title : OPTIT gentitle CLTIT'''
+    global HTML
+    HTML=HTML+str(p[2])
     
 def p_gentitle(p):
     '''gentitle : TEXTO 
@@ -578,7 +591,6 @@ def p_error(p):
     if (p):
         print(f'Error parser --> Tipo: {p.type} | Valor: {p.value}')
         print('Error sintáctico en LINEA:', p.lineno)
-
     contadorErrores += 1
 
 
