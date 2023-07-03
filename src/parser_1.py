@@ -1,29 +1,24 @@
 from imp import reload
+from tkinter import filedialog
 import ply.yacc as yacc
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 import os
 import re
 import codecs
-from AnalizadorL import tokens
+from AnalizadorL import tokens, inicioTraduccion, finTraduccion 
 from termcolor import colored
 from sys import stdin
 
-global HTML
-HTML=''
 contadorErrores = 0
 
 def p_sigma(p):
     '''sigma    :   DOCTYPE docBook '''
-    global HTML
-    HTML= HTML+'<!DOCTYPE html>'
+
 
 def p_docBook(p):
     '''docBook  :   OPART articulo CLART'''
-    global HTML
-    HTML=HTML+'<html><head></head><body>'
-    HTML=HTML+str(p[2])  # Escribir el valor de 'articulo' en el archivo
-    HTML+='\n\n</body></html>'
+
 
 
 def p_articulo(p):
@@ -40,14 +35,7 @@ def p_articulo(p):
                 | title genArt section
                 | info title genArt section
                 | genArt section'''
-    global HTML       
-    if (p[1]=='info') & (p[2]=='genArt'):
-        HTML = HTML+str(p[1])
-        HTML = HTML+str(p[2])
-    elif p[1]=='title':
-        HTML = HTML+'<h1>'
-        HTML = HTML+str(p[1])
-        HTML = HTML+'</h1>'
+
 
 
 
@@ -208,8 +196,6 @@ def p_genCopy2(p):
 
 def p_title(p):
     '''title : OPTIT gentitle CLTIT'''
-    global HTML
-    HTML=HTML+str(p[2])
     
 def p_gentitle(p):
     '''gentitle : TEXTO 
@@ -486,15 +472,6 @@ def p_genMO(p):
                     | videoObject genMO
                     | imageObject genMO'''
 
-def p_videoObject(p):
-    '''videoObject : OPVOBJ info CLVOBJ
-                | OPVOBJ VIDAT CLVOBJ
-                | OPVOBJ info VIDAT CLVOBJ'''
-
-def p_imageObject (p):
-    '''imageObject  : OPIMOBJ info CLIMOBJ
-                    | OPIMOBJ IMDATA CLIMOBJ
-                    | OPIMOBJ info IMDATA CLIMOBJ'''
 
 def p_itemizedList(p):
     '''itemizedList :  OPILIST genIList CLILIST'''
@@ -502,6 +479,16 @@ def p_itemizedList(p):
 def p_genIList(p):
     '''genIList : listItem
                 | listItem genIList'''
+
+
+def p_videoObject(p):
+    '''videoObject :  OPVOBJ VIDAT CLVOBJ
+                    | OPVOBJ info VIDAT CLVOBJ'''
+
+def p_imageObject (p):
+    '''imageObject  : OPIMOBJ IMDATA CLIMOBJ
+                    | OPIMOBJ info IMDATA CLIMOBJ'''
+
 
 def p_listItem(p):
     '''listItem : OPLITEM genlistItem CLLITEM'''
@@ -542,7 +529,7 @@ def p_tGroup(p):
     '''tGroup : OPTGROUP thead CLTGROUP
             | OPTGROUP tfoot CLTGROUP
             | OPTGROUP tbody CLTGROUP'''
-                       
+            
 def p_thead(p):
     '''thead : OPHEAD genHFB CLHEAD'''
 
@@ -607,12 +594,21 @@ def opcion1():
     directorio_archivo = os.path.dirname(ruta_archivo)
     fp=codecs.open(ruta_archivo,"r","UTF-8")
     cad=fp.read()
-    global file_HTML
-    file_HTML=open(directorio_archivo + "\\File.html","w")
+    inicioTraduccion(directorio_archivo + "\\File.html")
     result=parser.parse(cad)
     print(result)
-    file_HTML.write(HTML)
-    file_HTML.close()
+    finTraduccion()
+    global contadorErrores
+    if contadorErrores > 0:
+        print('(⨉) Ocurrió un error sintáctico.')
+        # Resetear contador
+        contadorErrores = 0
+    else:
+        print('✅ El archivo es sintacticamente correcto!')
+        # Ejecutar exportacion de html
+        print('(✅) Sintácticamente correcto. Se exportó un .html con los comentarios.')
+        print('(!) Se exportó un .txt con las producciones analizadas.')
+
     fp.close()
 
     
@@ -623,11 +619,41 @@ def opcion2():
     while True:
         linea = input("Ingresa una línea (presiona Enter para continuar, o escribe 'salir' para terminar): ")
         if linea == "salir":
+            finTraduccion()
             break
         cad=''
         cad=cad+linea
-        result=parser.parse(cad)
-        print(result)
+        inicioTraduccion(os.getcwd() + "\\File.html") #getcwd devuelve la ruta actual
+
+            # Mostrar el cuadro de diálogo para guardar archivo
+    file_path = filedialog.asksaveasfilename(
+    initialdir="/",  # Carpeta inicial mostrada en el cuadro de diálogo
+    title="Guardar archivo",  # Título del cuadro de diálogo
+    filetypes=(("Archivos de texto", "*.html"), ("Todos los archivos", "*.*")))  # Filtros de archivo
+
+    inicioTraduccion(file_path)
+    
+    if file_path:
+    # Realizar las operaciones necesarias con el archivo
+    # En este ejemplo, simplemente imprimimos la ruta del archivo seleccionado
+        print("Archivo guardado en:", file_path)
+    else:
+        print("No se seleccionó ningún archivo.")
+
+    result=parser.parse(cad)
+    print(result)
+    global contadorErrores
+    if contadorErrores > 0:
+        print('(⨉) Ocurrió un error sintáctico.')
+        # Resetear contador
+        contadorErrores = 0
+    else:
+        print('✅ El archivo es sintacticamente correcto!')
+        # Ejecutar exportacion de html
+        print('(✅) Sintácticamente correcto. Se exportó un .html con los comentarios.')
+        print('(!) Se exportó un .txt con las producciones analizadas.')
+    
+    finTraduccion()
         
         
 

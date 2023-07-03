@@ -346,68 +346,66 @@ Rule 336   genMO -> videoObject
 Rule 337   genMO -> imageObject
 Rule 338   genMO -> videoObject genMO
 Rule 339   genMO -> imageObject genMO
-Rule 340   videoObject -> OPVOBJ info CLVOBJ
-Rule 341   videoObject -> OPVOBJ VIDAT CLVOBJ
-Rule 342   videoObject -> OPVOBJ info VIDAT CLVOBJ
-Rule 343   imageObject -> OPIMOBJ info CLIMOBJ
-Rule 344   imageObject -> OPIMOBJ IMDATA CLIMOBJ
-Rule 345   imageObject -> OPIMOBJ info IMDATA CLIMOBJ
-Rule 346   itemizedList -> OPILIST genIList CLILIST
-Rule 347   genIList -> listItem
-Rule 348   genIList -> listItem genIList
-Rule 349   listItem -> OPLITEM genlistItem CLLITEM
-Rule 350   genlistItem -> itemizedList
-Rule 351   genlistItem -> important
-Rule 352   genlistItem -> para
-Rule 353   genlistItem -> simpara
-Rule 354   genlistItem -> address
-Rule 355   genlistItem -> mediaObject
-Rule 356   genlistItem -> informalTable
-Rule 357   genlistItem -> comment
-Rule 358   genlistItem -> abstract
-Rule 359   genlistItem -> itemizedList genlistItem
-Rule 360   genlistItem -> important genlistItem
-Rule 361   genlistItem -> para genlistItem
-Rule 362   genlistItem -> simpara genlistItem
-Rule 363   genlistItem -> address genlistItem
-Rule 364   genlistItem -> mediaObject genlistItem
-Rule 365   genlistItem -> informalTable genlistItem
-Rule 366   genlistItem -> comment genlistItem
-Rule 367   genlistItem -> abstract genlistItem
-Rule 368   informalTable -> OPINTAB genIT1 CLINTAB
-Rule 369   informalTable -> OPINTAB genIT2 CLINTAB
-Rule 370   genIT1 -> address
-Rule 371   genIT1 -> address genIT1
-Rule 372   genIT2 -> tGroup
-Rule 373   genIT2 -> tGroup genIT2
-Rule 374   tGroup -> OPTGROUP thead CLTGROUP
-Rule 375   tGroup -> OPTGROUP tfoot CLTGROUP
-Rule 376   tGroup -> OPTGROUP tbody CLTGROUP
-Rule 377   thead -> OPHEAD genHFB CLHEAD
-Rule 378   tfoot -> OPFOOT genHFB CLFOOT
-Rule 379   tbody -> OPBODY genHFB CLBODY
-Rule 380   genHFB -> row
-Rule 381   genHFB -> row genHFB
-Rule 382   row -> OPROW genrow CLROW
-Rule 383   genrow -> entry
-Rule 384   genrow -> entry genrow
-Rule 385   entry -> OPENTRY genentry CLENTRY
-Rule 386   genentry -> TEXTO
-Rule 387   genentry -> itemizedList
-Rule 388   genentry -> important
-Rule 389   genentry -> para
-Rule 390   genentry -> simpara
-Rule 391   genentry -> address
-Rule 392   genentry -> comment
-Rule 393   genentry -> abstract
-Rule 394   genentry -> TEXTO genentry
-Rule 395   genentry -> itemizedList genentry
-Rule 396   genentry -> important genentry
-Rule 397   genentry -> para genentry
-Rule 398   genentry -> simpara genentry
-Rule 399   genentry -> address genentry
-Rule 400   genentry -> comment genentry
-Rule 401   genentry -> abstract genentry
+Rule 340   itemizedList -> OPILIST genIList CLILIST
+Rule 341   genIList -> listItem
+Rule 342   genIList -> listItem genIList
+Rule 343   videoObject -> OPVOBJ VIDAT CLVOBJ
+Rule 344   videoObject -> OPVOBJ info VIDAT CLVOBJ
+Rule 345   imageObject -> OPIMOBJ IMDATA CLIMOBJ
+Rule 346   imageObject -> OPIMOBJ info IMDATA CLIMOBJ
+Rule 347   listItem -> OPLITEM genlistItem CLLITEM
+Rule 348   genlistItem -> itemizedList
+Rule 349   genlistItem -> important
+Rule 350   genlistItem -> para
+Rule 351   genlistItem -> simpara
+Rule 352   genlistItem -> address
+Rule 353   genlistItem -> mediaObject
+Rule 354   genlistItem -> informalTable
+Rule 355   genlistItem -> comment
+Rule 356   genlistItem -> abstract
+Rule 357   genlistItem -> itemizedList genlistItem
+Rule 358   genlistItem -> important genlistItem
+Rule 359   genlistItem -> para genlistItem
+Rule 360   genlistItem -> simpara genlistItem
+Rule 361   genlistItem -> address genlistItem
+Rule 362   genlistItem -> mediaObject genlistItem
+Rule 363   genlistItem -> informalTable genlistItem
+Rule 364   genlistItem -> comment genlistItem
+Rule 365   genlistItem -> abstract genlistItem
+Rule 366   informalTable -> OPINTAB genIT1 CLINTAB
+Rule 367   informalTable -> OPINTAB genIT2 CLINTAB
+Rule 368   genIT1 -> address
+Rule 369   genIT1 -> address genIT1
+Rule 370   genIT2 -> tGroup
+Rule 371   genIT2 -> tGroup genIT2
+Rule 372   tGroup -> OPTGROUP thead CLTGROUP
+Rule 373   tGroup -> OPTGROUP tfoot CLTGROUP
+Rule 374   tGroup -> OPTGROUP tbody CLTGROUP
+Rule 375   thead -> OPHEAD genHFB CLHEAD
+Rule 376   tfoot -> OPFOOT genHFB CLFOOT
+Rule 377   tbody -> OPBODY genHFB CLBODY
+Rule 378   genHFB -> row
+Rule 379   genHFB -> row genHFB
+Rule 380   row -> OPROW genrow CLROW
+Rule 381   genrow -> entry
+Rule 382   genrow -> entry genrow
+Rule 383   entry -> OPENTRY genentry CLENTRY
+Rule 384   genentry -> TEXTO
+Rule 385   genentry -> itemizedList
+Rule 386   genentry -> important
+Rule 387   genentry -> para
+Rule 388   genentry -> simpara
+Rule 389   genentry -> address
+Rule 390   genentry -> comment
+Rule 391   genentry -> abstract
+Rule 392   genentry -> TEXTO genentry
+Rule 393   genentry -> itemizedList genentry
+Rule 394   genentry -> important genentry
+Rule 395   genentry -> para genentry
+Rule 396   genentry -> simpara genentry
+Rule 397   genentry -> address genentry
+Rule 398   genentry -> comment genentry
+Rule 399   genentry -> abstract genentry
 
 Terminals, with rules where they appear
 
@@ -415,97 +413,97 @@ CLABST               : 103 104
 CLADD                : 109 110
 CLART                : 2
 CLAUTHOR             : 123
-CLBODY               : 379
+CLBODY               : 377
 CLCITY               : 265
 CLCOM                : 169
 CLCOPY               : 128 129
 CLDATE               : 301
 CLEMAIL              : 292
 CLEMPH               : 156
-CLENTRY              : 385
+CLENTRY              : 383
 CLFNAME              : 238
-CLFOOT               : 378
-CLHEAD               : 377
+CLFOOT               : 376
+CLHEAD               : 375
 CLHOLDER             : 319
-CLILIST              : 346
-CLIMOBJ              : 343 344 345
+CLILIST              : 340
+CLIMOBJ              : 345 346
 CLIMPORT             : 218 219
 CLINFO               : 102
-CLINTAB              : 368 369
+CLINTAB              : 366 367
 CLLINK               : 182
-CLLITEM              : 349
+CLLITEM              : 347
 CLMOBJ               : 328 329 330 331 332 333 334 335
 CLPARA               : 195
 CLPHONE              : 283
-CLROW                : 382
+CLROW                : 380
 CLSECT               : 32 33 34 35 36 37 38 39 40 41 42 43
 CLSMANE              : 247
 CLSPARA              : 143
 CLSSECT              : 66 67 68 69
 CLSTATE              : 274
 CLSTREET             : 256
-CLTGROUP             : 374 375 376
+CLTGROUP             : 372 373 374
 CLTIT                : 134
-CLVOBJ               : 340 341 342
+CLVOBJ               : 343 344
 CLYEAR               : 310
 DOCTYPE              : 1
-IMDATA               : 344 345
+IMDATA               : 345 346
 NUMERO               : 
 OPABST               : 103 104
 OPADD                : 109 110
 OPART                : 2
 OPAUTHOR             : 123
-OPBODY               : 379
+OPBODY               : 377
 OPCITY               : 265
 OPCOM                : 169
 OPCOPY               : 128 129
 OPDATE               : 301
 OPEMAIL              : 292
 OPEMPH               : 156
-OPENTRY              : 385
+OPENTRY              : 383
 OPFNAME              : 238
-OPFOOT               : 378
-OPHEAD               : 377
+OPFOOT               : 376
+OPHEAD               : 375
 OPHOLDER             : 319
-OPILIST              : 346
-OPIMOBJ              : 343 344 345
+OPILIST              : 340
+OPIMOBJ              : 345 346
 OPIMPORT             : 218 219
 OPINFO               : 102
-OPINTAB              : 368 369
+OPINTAB              : 366 367
 OPLINK               : 182
-OPLITEM              : 349
+OPLITEM              : 347
 OPMOBJ               : 328 329 330 331 332 333 334 335
 OPPARA               : 195
 OPPHONE              : 283
-OPROW                : 382
+OPROW                : 380
 OPSECT               : 32 33 34 35 36 37 38 39 40 41 42 43
 OPSNAME              : 247
 OPSPARA              : 143
 OPSSECT              : 66 67 68 69
 OPSTATE              : 274
 OPSTREET             : 256
-OPTGROUP             : 374 375 376
+OPTGROUP             : 372 373 374
 OPTIT                : 134
-OPVOBJ               : 340 341 342
+OPVOBJ               : 343 344
 OPYEAR               : 310
-TEXTO                : 111 117 135 139 144 150 157 163 170 176 183 189 196 207 239 243 248 252 257 261 266 270 275 279 284 288 293 297 302 306 311 315 320 324 386 394
-VIDAT                : 341 342
+TEXTO                : 111 117 135 139 144 150 157 163 170 176 183 189 196 207 239 243 248 252 257 261 266 270 275 279 284 288 293 297 302 306 311 315 320 324 384 392
+VIDAT                : 343 344
 error                : 
 
 Nonterminals, with rules where they appear
 
-abstract             : 23 31 52 61 78 87 89 96 228 237 358 367 393 401
-address              : 20 28 48 57 74 83 90 97 204 215 224 233 354 363 370 371 391 399
+abstract             : 23 31 52 61 78 87 89 96 228 237 356 365 391 399
+address              : 20 28 48 57 74 83 90 97 204 215 224 233 352 361 368 369 389 397
 articulo             : 2
 author               : 91 98 148 154 161 167 174 180 187 193 200 211
 city                 : 113 119
-comment              : 22 30 51 60 77 86 149 155 162 168 175 181 188 194 201 212 227 236 242 246 251 255 260 264 269 273 278 282 287 291 296 300 305 309 314 318 323 327 357 366 392 400
+comment              : 22 30 51 60 77 86 149 155 162 168 175 181 188 194 201 212 227 236 242 246 251 255 260 264 269 273 278 282 287 291 296 300 305 309 314 318 323 327 355 364 390 398
 copyright            : 93 100
 date                 : 92 99
 docBook              : 1
 email                : 116 122 138 142 147 153 160 166 173 179 186 192 199 210
 emphasis             : 136 140 145 151 158 164 171 177 184 190 197 208 241 245 250 254 259 263 268 272 277 281 286 290 295 299 304 308 313 317 322 326
-entry                : 383 384
+entry                : 381 382
 firstName            : 124 126
 genAbstr             : 103 104 107 108
 genAdd               : 110 117 118 119 120 121 122
@@ -515,10 +513,10 @@ genCopy1             : 128 129 131
 genCopy2             : 129 133
 genEmp               : 156 163 164 165 166 167 168
 genFN                : 238 243 244 245 246
-genHFB               : 377 378 379 381
-genIList             : 346 348
-genIT1               : 368 371
-genIT2               : 369 373
+genHFB               : 375 376 377 379
+genIList             : 340 342
+genIT1               : 366 369
+genIT2               : 367 371
 genImport            : 218 219 229 230 231 232 233 234 235 236 237
 genMO                : 332 333 334 335 338 339
 genSN                : 247 252 253 254 255
@@ -532,40 +530,40 @@ genauthor            : 123 126 127
 gencity              : 265 270 271 272 273
 gendate              : 301 306 307 308 309
 genemail             : 292 297 298 299 300
-genentry             : 385 394 395 396 397 398 399 400 401
+genentry             : 383 392 393 394 395 396 397 398 399
 genholder            : 319 324 325 326 327
 geninfo              : 95 96 97 98 99 100 101 102
 genlink              : 182 189 190 191 192 193 194
-genlistItem          : 349 359 360 361 362 363 364 365 366 367
+genlistItem          : 347 357 358 359 360 361 362 363 364 365
 genpara              : 195 207 208 209 210 211 212 213 214 215 216 217
 genphone             : 283 288 289 290 291
-genrow               : 382 384
+genrow               : 380 382
 genstreet            : 256 261 262 263 264
 gentitle             : 134 139 140 141 142
 genyear              : 310 315 316 317 318
 holder               : 132 133
 imageObject          : 329 331 333 335 337 339
-important            : 17 25 45 54 71 80 203 214 221 230 351 360 388 396
-info                 : 3 5 7 9 11 12 14 32 34 36 38 40 42 66 68 328 329 332 333 340 342 343 345
-informalTable        : 21 29 50 59 76 85 206 217 226 235 356 365
-itemizedList         : 16 24 44 53 70 79 202 213 220 229 350 359 387 395
+important            : 17 25 45 54 71 80 203 214 221 230 349 358 386 394
+info                 : 3 5 7 9 11 12 14 32 34 36 38 40 42 66 68 328 329 332 333 344 346
+informalTable        : 21 29 50 59 76 85 206 217 226 235 354 363
+itemizedList         : 16 24 44 53 70 79 202 213 220 229 348 357 385 393
 link                 : 137 141 146 152 159 165 172 178 185 191 198 209 240 244 249 253 258 262 267 271 276 280 285 289 294 298 303 307 312 316 321 325
-listItem             : 347 348
-mediaObject          : 49 58 75 84 94 95 205 216 225 234 355 364
-para                 : 18 26 46 55 72 81 105 107 222 231 352 361 389 397
+listItem             : 341 342
+mediaObject          : 49 58 75 84 94 95 205 216 225 234 353 362
+para                 : 18 26 46 55 72 81 105 107 222 231 350 359 387 395
 phone                : 115 121
-row                  : 380 381
+row                  : 378 379
 section              : 11 12 13 14 15 64 65
 sigma                : 0
-simpara              : 19 27 47 56 73 82 106 108 223 232 353 362 390 398
+simpara              : 19 27 47 56 73 82 106 108 223 232 351 360 388 396
 simpleSec            : 7 8 9 10 62 63
 state                : 114 120
 street               : 112 118
 surName              : 125 127
-tGroup               : 372 373
-tbody                : 376
-tfoot                : 375
-thead                : 374
+tGroup               : 370 371
+tbody                : 374
+tfoot                : 373
+thead                : 372
 title                : 4 5 8 9 13 14 33 34 37 38 41 42 67 68 88 101 103 218
 videoObject          : 328 330 332 334 336 338
 year                 : 130 131
@@ -637,15 +635,15 @@ state 4
     (29) genArt -> . informalTable genArt
     (30) genArt -> . comment genArt
     (31) genArt -> . abstract genArt
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
     (143) simpara -> . OPSPARA genSpara CLSPARA
     (109) address -> . OPADD CLADD
     (110) address -> . OPADD genAdd CLADD
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -719,15 +717,15 @@ state 6
     (41) section -> . OPSECT title genSect1 genSect3 CLSECT
     (42) section -> . OPSECT info title genSect1 genSect3 CLSECT
     (43) section -> . OPSECT genSect1 genSect3 CLSECT
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
     (143) simpara -> . OPSPARA genSpara CLSPARA
     (109) address -> . OPADD CLADD
     (110) address -> . OPADD genAdd CLADD
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -805,15 +803,15 @@ state 8
     (29) genArt -> . informalTable genArt
     (30) genArt -> . comment genArt
     (31) genArt -> . abstract genArt
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
     (143) simpara -> . OPSPARA genSpara CLSPARA
     (109) address -> . OPADD CLADD
     (110) address -> . OPADD genAdd CLADD
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -934,15 +932,15 @@ state 11
     (29) genArt -> . informalTable genArt
     (30) genArt -> . comment genArt
     (31) genArt -> . abstract genArt
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
     (143) simpara -> . OPSPARA genSpara CLSPARA
     (109) address -> . OPADD CLADD
     (110) address -> . OPADD genAdd CLADD
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -989,15 +987,15 @@ state 12
     (29) genArt -> . informalTable genArt
     (30) genArt -> . comment genArt
     (31) genArt -> . abstract genArt
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
     (143) simpara -> . OPSPARA genSpara CLSPARA
     (109) address -> . OPADD CLADD
     (110) address -> . OPADD genAdd CLADD
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -1044,15 +1042,15 @@ state 13
     (29) genArt -> . informalTable genArt
     (30) genArt -> . comment genArt
     (31) genArt -> . abstract genArt
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
     (143) simpara -> . OPSPARA genSpara CLSPARA
     (109) address -> . OPADD CLADD
     (110) address -> . OPADD genAdd CLADD
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -1099,15 +1097,15 @@ state 14
     (29) genArt -> . informalTable genArt
     (30) genArt -> . comment genArt
     (31) genArt -> . abstract genArt
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
     (143) simpara -> . OPSPARA genSpara CLSPARA
     (109) address -> . OPADD CLADD
     (110) address -> . OPADD genAdd CLADD
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -1154,15 +1152,15 @@ state 15
     (29) genArt -> . informalTable genArt
     (30) genArt -> . comment genArt
     (31) genArt -> . abstract genArt
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
     (143) simpara -> . OPSPARA genSpara CLSPARA
     (109) address -> . OPADD CLADD
     (110) address -> . OPADD genAdd CLADD
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -1209,15 +1207,15 @@ state 16
     (29) genArt -> . informalTable genArt
     (30) genArt -> . comment genArt
     (31) genArt -> . abstract genArt
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
     (143) simpara -> . OPSPARA genSpara CLSPARA
     (109) address -> . OPADD CLADD
     (110) address -> . OPADD genAdd CLADD
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -1264,15 +1262,15 @@ state 17
     (29) genArt -> . informalTable genArt
     (30) genArt -> . comment genArt
     (31) genArt -> . abstract genArt
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
     (143) simpara -> . OPSPARA genSpara CLSPARA
     (109) address -> . OPADD CLADD
     (110) address -> . OPADD genAdd CLADD
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -1319,15 +1317,15 @@ state 18
     (29) genArt -> . informalTable genArt
     (30) genArt -> . comment genArt
     (31) genArt -> . abstract genArt
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
     (143) simpara -> . OPSPARA genSpara CLSPARA
     (109) address -> . OPADD CLADD
     (110) address -> . OPADD genAdd CLADD
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -1356,10 +1354,10 @@ state 18
 
 state 19
 
-    (346) itemizedList -> OPILIST . genIList CLILIST
-    (347) genIList -> . listItem
-    (348) genIList -> . listItem genIList
-    (349) listItem -> . OPLITEM genlistItem CLLITEM
+    (340) itemizedList -> OPILIST . genIList CLILIST
+    (341) genIList -> . listItem
+    (342) genIList -> . listItem genIList
+    (347) listItem -> . OPLITEM genlistItem CLLITEM
 
     OPLITEM         shift and go to state 66
 
@@ -1389,7 +1387,7 @@ state 20
     (235) genImport -> . informalTable genImport
     (236) genImport -> . comment genImport
     (237) genImport -> . abstract genImport
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -1404,8 +1402,8 @@ state 20
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -1463,7 +1461,7 @@ state 21
     (292) email -> . OPEMAIL genemail CLEMAIL
     (123) author -> . OPAUTHOR genauthor CLAUTHOR
     (169) comment -> . OPCOM genCom CLCOM
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (109) address -> . OPADD CLADD
@@ -1476,8 +1474,8 @@ state 21
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
 
     TEXTO           shift and go to state 79
     OPEMPH          shift and go to state 53
@@ -1577,17 +1575,17 @@ state 23
 
 state 24
 
-    (368) informalTable -> OPINTAB . genIT1 CLINTAB
-    (369) informalTable -> OPINTAB . genIT2 CLINTAB
-    (370) genIT1 -> . address
-    (371) genIT1 -> . address genIT1
-    (372) genIT2 -> . tGroup
-    (373) genIT2 -> . tGroup genIT2
+    (366) informalTable -> OPINTAB . genIT1 CLINTAB
+    (367) informalTable -> OPINTAB . genIT2 CLINTAB
+    (368) genIT1 -> . address
+    (369) genIT1 -> . address genIT1
+    (370) genIT2 -> . tGroup
+    (371) genIT2 -> . tGroup genIT2
     (109) address -> . OPADD CLADD
     (110) address -> . OPADD genAdd CLADD
-    (374) tGroup -> . OPTGROUP thead CLTGROUP
-    (375) tGroup -> . OPTGROUP tfoot CLTGROUP
-    (376) tGroup -> . OPTGROUP tbody CLTGROUP
+    (372) tGroup -> . OPTGROUP thead CLTGROUP
+    (373) tGroup -> . OPTGROUP tfoot CLTGROUP
+    (374) tGroup -> . OPTGROUP tbody CLTGROUP
 
     OPADD           shift and go to state 23
     OPTGROUP        shift and go to state 113
@@ -1710,15 +1708,15 @@ state 29
     (29) genArt -> . informalTable genArt
     (30) genArt -> . comment genArt
     (31) genArt -> . abstract genArt
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
     (143) simpara -> . OPSPARA genSpara CLSPARA
     (109) address -> . OPADD CLADD
     (110) address -> . OPADD genAdd CLADD
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -1783,7 +1781,7 @@ state 31
     (59) genSect1 -> . informalTable genSect1
     (60) genSect1 -> . comment genSect1
     (61) genSect1 -> . abstract genSect1
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -1798,8 +1796,8 @@ state 31
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -1869,7 +1867,7 @@ state 34
     (85) genSSect -> . informalTable genSSect
     (86) genSSect -> . comment genSSect
     (87) genSSect -> . abstract genSSect
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -1884,8 +1882,8 @@ state 34
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -2395,12 +2393,10 @@ state 47
     (334) mediaObject -> OPMOBJ . videoObject genMO CLMOBJ
     (335) mediaObject -> OPMOBJ . imageObject genMO CLMOBJ
     (102) info -> . OPINFO geninfo CLINFO
-    (340) videoObject -> . OPVOBJ info CLVOBJ
-    (341) videoObject -> . OPVOBJ VIDAT CLVOBJ
-    (342) videoObject -> . OPVOBJ info VIDAT CLVOBJ
-    (343) imageObject -> . OPIMOBJ info CLIMOBJ
-    (344) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
-    (345) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
+    (343) videoObject -> . OPVOBJ VIDAT CLVOBJ
+    (344) videoObject -> . OPVOBJ info VIDAT CLVOBJ
+    (345) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
+    (346) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
 
     OPINFO          shift and go to state 9
     OPVOBJ          shift and go to state 178
@@ -2694,20 +2690,20 @@ state 63
 
 state 64
 
-    (346) itemizedList -> OPILIST genIList . CLILIST
+    (340) itemizedList -> OPILIST genIList . CLILIST
 
     CLILIST         shift and go to state 204
 
 
 state 65
 
-    (347) genIList -> listItem .
-    (348) genIList -> listItem . genIList
-    (347) genIList -> . listItem
-    (348) genIList -> . listItem genIList
-    (349) listItem -> . OPLITEM genlistItem CLLITEM
+    (341) genIList -> listItem .
+    (342) genIList -> listItem . genIList
+    (341) genIList -> . listItem
+    (342) genIList -> . listItem genIList
+    (347) listItem -> . OPLITEM genlistItem CLLITEM
 
-    CLILIST         reduce using rule 347 (genIList -> listItem .)
+    CLILIST         reduce using rule 341 (genIList -> listItem .)
     OPLITEM         shift and go to state 66
 
     listItem                       shift and go to state 65
@@ -2715,26 +2711,26 @@ state 65
 
 state 66
 
-    (349) listItem -> OPLITEM . genlistItem CLLITEM
-    (350) genlistItem -> . itemizedList
-    (351) genlistItem -> . important
-    (352) genlistItem -> . para
-    (353) genlistItem -> . simpara
-    (354) genlistItem -> . address
-    (355) genlistItem -> . mediaObject
-    (356) genlistItem -> . informalTable
-    (357) genlistItem -> . comment
-    (358) genlistItem -> . abstract
-    (359) genlistItem -> . itemizedList genlistItem
-    (360) genlistItem -> . important genlistItem
-    (361) genlistItem -> . para genlistItem
-    (362) genlistItem -> . simpara genlistItem
-    (363) genlistItem -> . address genlistItem
-    (364) genlistItem -> . mediaObject genlistItem
-    (365) genlistItem -> . informalTable genlistItem
-    (366) genlistItem -> . comment genlistItem
-    (367) genlistItem -> . abstract genlistItem
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (347) listItem -> OPLITEM . genlistItem CLLITEM
+    (348) genlistItem -> . itemizedList
+    (349) genlistItem -> . important
+    (350) genlistItem -> . para
+    (351) genlistItem -> . simpara
+    (352) genlistItem -> . address
+    (353) genlistItem -> . mediaObject
+    (354) genlistItem -> . informalTable
+    (355) genlistItem -> . comment
+    (356) genlistItem -> . abstract
+    (357) genlistItem -> . itemizedList genlistItem
+    (358) genlistItem -> . important genlistItem
+    (359) genlistItem -> . para genlistItem
+    (360) genlistItem -> . simpara genlistItem
+    (361) genlistItem -> . address genlistItem
+    (362) genlistItem -> . mediaObject genlistItem
+    (363) genlistItem -> . informalTable genlistItem
+    (364) genlistItem -> . comment genlistItem
+    (365) genlistItem -> . abstract genlistItem
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -2749,8 +2745,8 @@ state 66
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -2797,7 +2793,7 @@ state 67
     (235) genImport -> . informalTable genImport
     (236) genImport -> . comment genImport
     (237) genImport -> . abstract genImport
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -2812,8 +2808,8 @@ state 67
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -2868,7 +2864,7 @@ state 69
     (235) genImport -> . informalTable genImport
     (236) genImport -> . comment genImport
     (237) genImport -> . abstract genImport
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -2883,8 +2879,8 @@ state 69
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -2933,7 +2929,7 @@ state 70
     (235) genImport -> . informalTable genImport
     (236) genImport -> . comment genImport
     (237) genImport -> . abstract genImport
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -2948,8 +2944,8 @@ state 70
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -2998,7 +2994,7 @@ state 71
     (235) genImport -> . informalTable genImport
     (236) genImport -> . comment genImport
     (237) genImport -> . abstract genImport
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -3013,8 +3009,8 @@ state 71
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -3063,7 +3059,7 @@ state 72
     (235) genImport -> . informalTable genImport
     (236) genImport -> . comment genImport
     (237) genImport -> . abstract genImport
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -3078,8 +3074,8 @@ state 72
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -3128,7 +3124,7 @@ state 73
     (235) genImport -> . informalTable genImport
     (236) genImport -> . comment genImport
     (237) genImport -> . abstract genImport
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -3143,8 +3139,8 @@ state 73
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -3193,7 +3189,7 @@ state 74
     (235) genImport -> . informalTable genImport
     (236) genImport -> . comment genImport
     (237) genImport -> . abstract genImport
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -3208,8 +3204,8 @@ state 74
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -3258,7 +3254,7 @@ state 75
     (235) genImport -> . informalTable genImport
     (236) genImport -> . comment genImport
     (237) genImport -> . abstract genImport
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -3273,8 +3269,8 @@ state 75
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -3323,7 +3319,7 @@ state 76
     (235) genImport -> . informalTable genImport
     (236) genImport -> . comment genImport
     (237) genImport -> . abstract genImport
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -3338,8 +3334,8 @@ state 76
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -3388,7 +3384,7 @@ state 77
     (235) genImport -> . informalTable genImport
     (236) genImport -> . comment genImport
     (237) genImport -> . abstract genImport
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -3403,8 +3399,8 @@ state 77
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -3469,7 +3465,7 @@ state 79
     (292) email -> . OPEMAIL genemail CLEMAIL
     (123) author -> . OPAUTHOR genauthor CLAUTHOR
     (169) comment -> . OPCOM genCom CLCOM
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (109) address -> . OPADD CLADD
@@ -3482,8 +3478,8 @@ state 79
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
 
     CLPARA          reduce using rule 196 (genpara -> TEXTO .)
     TEXTO           shift and go to state 79
@@ -3541,7 +3537,7 @@ state 80
     (292) email -> . OPEMAIL genemail CLEMAIL
     (123) author -> . OPAUTHOR genauthor CLAUTHOR
     (169) comment -> . OPCOM genCom CLCOM
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (109) address -> . OPADD CLADD
@@ -3554,8 +3550,8 @@ state 80
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
 
     CLPARA          reduce using rule 197 (genpara -> emphasis .)
     TEXTO           shift and go to state 79
@@ -3613,7 +3609,7 @@ state 81
     (292) email -> . OPEMAIL genemail CLEMAIL
     (123) author -> . OPAUTHOR genauthor CLAUTHOR
     (169) comment -> . OPCOM genCom CLCOM
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (109) address -> . OPADD CLADD
@@ -3626,8 +3622,8 @@ state 81
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
 
     CLPARA          reduce using rule 198 (genpara -> link .)
     TEXTO           shift and go to state 79
@@ -3685,7 +3681,7 @@ state 82
     (292) email -> . OPEMAIL genemail CLEMAIL
     (123) author -> . OPAUTHOR genauthor CLAUTHOR
     (169) comment -> . OPCOM genCom CLCOM
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (109) address -> . OPADD CLADD
@@ -3698,8 +3694,8 @@ state 82
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
 
     CLPARA          reduce using rule 199 (genpara -> email .)
     TEXTO           shift and go to state 79
@@ -3757,7 +3753,7 @@ state 83
     (292) email -> . OPEMAIL genemail CLEMAIL
     (123) author -> . OPAUTHOR genauthor CLAUTHOR
     (169) comment -> . OPCOM genCom CLCOM
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (109) address -> . OPADD CLADD
@@ -3770,8 +3766,8 @@ state 83
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
 
     CLPARA          reduce using rule 200 (genpara -> author .)
     TEXTO           shift and go to state 79
@@ -3829,7 +3825,7 @@ state 84
     (292) email -> . OPEMAIL genemail CLEMAIL
     (123) author -> . OPAUTHOR genauthor CLAUTHOR
     (169) comment -> . OPCOM genCom CLCOM
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (109) address -> . OPADD CLADD
@@ -3842,8 +3838,8 @@ state 84
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
 
     CLPARA          reduce using rule 201 (genpara -> comment .)
     TEXTO           shift and go to state 79
@@ -3901,7 +3897,7 @@ state 85
     (292) email -> . OPEMAIL genemail CLEMAIL
     (123) author -> . OPAUTHOR genauthor CLAUTHOR
     (169) comment -> . OPCOM genCom CLCOM
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (109) address -> . OPADD CLADD
@@ -3914,8 +3910,8 @@ state 85
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
 
     CLPARA          reduce using rule 202 (genpara -> itemizedList .)
     TEXTO           shift and go to state 79
@@ -3973,7 +3969,7 @@ state 86
     (292) email -> . OPEMAIL genemail CLEMAIL
     (123) author -> . OPAUTHOR genauthor CLAUTHOR
     (169) comment -> . OPCOM genCom CLCOM
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (109) address -> . OPADD CLADD
@@ -3986,8 +3982,8 @@ state 86
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
 
     CLPARA          reduce using rule 203 (genpara -> important .)
     TEXTO           shift and go to state 79
@@ -4045,7 +4041,7 @@ state 87
     (292) email -> . OPEMAIL genemail CLEMAIL
     (123) author -> . OPAUTHOR genauthor CLAUTHOR
     (169) comment -> . OPCOM genCom CLCOM
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (109) address -> . OPADD CLADD
@@ -4058,8 +4054,8 @@ state 87
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
 
     CLPARA          reduce using rule 204 (genpara -> address .)
     TEXTO           shift and go to state 79
@@ -4117,7 +4113,7 @@ state 88
     (292) email -> . OPEMAIL genemail CLEMAIL
     (123) author -> . OPAUTHOR genauthor CLAUTHOR
     (169) comment -> . OPCOM genCom CLCOM
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (109) address -> . OPADD CLADD
@@ -4130,8 +4126,8 @@ state 88
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
 
     CLPARA          reduce using rule 205 (genpara -> mediaObject .)
     TEXTO           shift and go to state 79
@@ -4189,7 +4185,7 @@ state 89
     (292) email -> . OPEMAIL genemail CLEMAIL
     (123) author -> . OPAUTHOR genauthor CLAUTHOR
     (169) comment -> . OPCOM genCom CLCOM
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (109) address -> . OPADD CLADD
@@ -4202,8 +4198,8 @@ state 89
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
 
     CLPARA          reduce using rule 206 (genpara -> informalTable .)
     TEXTO           shift and go to state 79
@@ -4824,28 +4820,28 @@ state 108
 
 state 109
 
-    (368) informalTable -> OPINTAB genIT1 . CLINTAB
+    (366) informalTable -> OPINTAB genIT1 . CLINTAB
 
     CLINTAB         shift and go to state 273
 
 
 state 110
 
-    (369) informalTable -> OPINTAB genIT2 . CLINTAB
+    (367) informalTable -> OPINTAB genIT2 . CLINTAB
 
     CLINTAB         shift and go to state 274
 
 
 state 111
 
-    (370) genIT1 -> address .
-    (371) genIT1 -> address . genIT1
-    (370) genIT1 -> . address
-    (371) genIT1 -> . address genIT1
+    (368) genIT1 -> address .
+    (369) genIT1 -> address . genIT1
+    (368) genIT1 -> . address
+    (369) genIT1 -> . address genIT1
     (109) address -> . OPADD CLADD
     (110) address -> . OPADD genAdd CLADD
 
-    CLINTAB         reduce using rule 370 (genIT1 -> address .)
+    CLINTAB         reduce using rule 368 (genIT1 -> address .)
     OPADD           shift and go to state 23
 
     address                        shift and go to state 111
@@ -4853,15 +4849,15 @@ state 111
 
 state 112
 
-    (372) genIT2 -> tGroup .
-    (373) genIT2 -> tGroup . genIT2
-    (372) genIT2 -> . tGroup
-    (373) genIT2 -> . tGroup genIT2
-    (374) tGroup -> . OPTGROUP thead CLTGROUP
-    (375) tGroup -> . OPTGROUP tfoot CLTGROUP
-    (376) tGroup -> . OPTGROUP tbody CLTGROUP
+    (370) genIT2 -> tGroup .
+    (371) genIT2 -> tGroup . genIT2
+    (370) genIT2 -> . tGroup
+    (371) genIT2 -> . tGroup genIT2
+    (372) tGroup -> . OPTGROUP thead CLTGROUP
+    (373) tGroup -> . OPTGROUP tfoot CLTGROUP
+    (374) tGroup -> . OPTGROUP tbody CLTGROUP
 
-    CLINTAB         reduce using rule 372 (genIT2 -> tGroup .)
+    CLINTAB         reduce using rule 370 (genIT2 -> tGroup .)
     OPTGROUP        shift and go to state 113
 
     tGroup                         shift and go to state 112
@@ -4869,12 +4865,12 @@ state 112
 
 state 113
 
-    (374) tGroup -> OPTGROUP . thead CLTGROUP
-    (375) tGroup -> OPTGROUP . tfoot CLTGROUP
-    (376) tGroup -> OPTGROUP . tbody CLTGROUP
-    (377) thead -> . OPHEAD genHFB CLHEAD
-    (378) tfoot -> . OPFOOT genHFB CLFOOT
-    (379) tbody -> . OPBODY genHFB CLBODY
+    (372) tGroup -> OPTGROUP . thead CLTGROUP
+    (373) tGroup -> OPTGROUP . tfoot CLTGROUP
+    (374) tGroup -> OPTGROUP . tbody CLTGROUP
+    (375) thead -> . OPHEAD genHFB CLHEAD
+    (376) tfoot -> . OPFOOT genHFB CLFOOT
+    (377) tbody -> . OPBODY genHFB CLBODY
 
     OPHEAD          shift and go to state 280
     OPFOOT          shift and go to state 281
@@ -5245,7 +5241,7 @@ state 128
     (60) genSect1 -> . comment genSect1
     (61) genSect1 -> . abstract genSect1
     (134) title -> . OPTIT gentitle CLTIT
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -5260,8 +5256,8 @@ state 128
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -5347,7 +5343,7 @@ state 130
     (59) genSect1 -> . informalTable genSect1
     (60) genSect1 -> . comment genSect1
     (61) genSect1 -> . abstract genSect1
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -5362,8 +5358,8 @@ state 130
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -5411,7 +5407,7 @@ state 131
     (59) genSect1 -> . informalTable genSect1
     (60) genSect1 -> . comment genSect1
     (61) genSect1 -> . abstract genSect1
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -5426,8 +5422,8 @@ state 131
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -5478,7 +5474,7 @@ state 132
     (59) genSect1 -> . informalTable genSect1
     (60) genSect1 -> . comment genSect1
     (61) genSect1 -> . abstract genSect1
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -5493,8 +5489,8 @@ state 132
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -5545,7 +5541,7 @@ state 133
     (59) genSect1 -> . informalTable genSect1
     (60) genSect1 -> . comment genSect1
     (61) genSect1 -> . abstract genSect1
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -5560,8 +5556,8 @@ state 133
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -5612,7 +5608,7 @@ state 134
     (59) genSect1 -> . informalTable genSect1
     (60) genSect1 -> . comment genSect1
     (61) genSect1 -> . abstract genSect1
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -5627,8 +5623,8 @@ state 134
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -5679,7 +5675,7 @@ state 135
     (59) genSect1 -> . informalTable genSect1
     (60) genSect1 -> . comment genSect1
     (61) genSect1 -> . abstract genSect1
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -5694,8 +5690,8 @@ state 135
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -5746,7 +5742,7 @@ state 136
     (59) genSect1 -> . informalTable genSect1
     (60) genSect1 -> . comment genSect1
     (61) genSect1 -> . abstract genSect1
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -5761,8 +5757,8 @@ state 136
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -5813,7 +5809,7 @@ state 137
     (59) genSect1 -> . informalTable genSect1
     (60) genSect1 -> . comment genSect1
     (61) genSect1 -> . abstract genSect1
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -5828,8 +5824,8 @@ state 137
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -5880,7 +5876,7 @@ state 138
     (59) genSect1 -> . informalTable genSect1
     (60) genSect1 -> . comment genSect1
     (61) genSect1 -> . abstract genSect1
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -5895,8 +5891,8 @@ state 138
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -5947,7 +5943,7 @@ state 139
     (59) genSect1 -> . informalTable genSect1
     (60) genSect1 -> . comment genSect1
     (61) genSect1 -> . abstract genSect1
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -5962,8 +5958,8 @@ state 139
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -6015,7 +6011,7 @@ state 140
     (86) genSSect -> . comment genSSect
     (87) genSSect -> . abstract genSSect
     (134) title -> . OPTIT gentitle CLTIT
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -6030,8 +6026,8 @@ state 140
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -6087,7 +6083,7 @@ state 142
     (85) genSSect -> . informalTable genSSect
     (86) genSSect -> . comment genSSect
     (87) genSSect -> . abstract genSSect
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -6102,8 +6098,8 @@ state 142
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -6151,7 +6147,7 @@ state 143
     (85) genSSect -> . informalTable genSSect
     (86) genSSect -> . comment genSSect
     (87) genSSect -> . abstract genSSect
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -6166,8 +6162,8 @@ state 143
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -6216,7 +6212,7 @@ state 144
     (85) genSSect -> . informalTable genSSect
     (86) genSSect -> . comment genSSect
     (87) genSSect -> . abstract genSSect
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -6231,8 +6227,8 @@ state 144
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -6281,7 +6277,7 @@ state 145
     (85) genSSect -> . informalTable genSSect
     (86) genSSect -> . comment genSSect
     (87) genSSect -> . abstract genSSect
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -6296,8 +6292,8 @@ state 145
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -6346,7 +6342,7 @@ state 146
     (85) genSSect -> . informalTable genSSect
     (86) genSSect -> . comment genSSect
     (87) genSSect -> . abstract genSSect
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -6361,8 +6357,8 @@ state 146
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -6411,7 +6407,7 @@ state 147
     (85) genSSect -> . informalTable genSSect
     (86) genSSect -> . comment genSSect
     (87) genSSect -> . abstract genSSect
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -6426,8 +6422,8 @@ state 147
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -6476,7 +6472,7 @@ state 148
     (85) genSSect -> . informalTable genSSect
     (86) genSSect -> . comment genSSect
     (87) genSSect -> . abstract genSSect
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -6491,8 +6487,8 @@ state 148
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -6541,7 +6537,7 @@ state 149
     (85) genSSect -> . informalTable genSSect
     (86) genSSect -> . comment genSSect
     (87) genSSect -> . abstract genSSect
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -6556,8 +6552,8 @@ state 149
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -6606,7 +6602,7 @@ state 150
     (85) genSSect -> . informalTable genSSect
     (86) genSSect -> . comment genSSect
     (87) genSSect -> . abstract genSSect
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -6621,8 +6617,8 @@ state 150
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -6671,7 +6667,7 @@ state 151
     (85) genSSect -> . informalTable genSSect
     (86) genSSect -> . comment genSSect
     (87) genSSect -> . abstract genSSect
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -6686,8 +6682,8 @@ state 151
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -6745,9 +6741,7 @@ state 154
     OPMOBJ          reduce using rule 102 (info -> OPINFO geninfo CLINFO .)
     OPVOBJ          reduce using rule 102 (info -> OPINFO geninfo CLINFO .)
     OPIMOBJ         reduce using rule 102 (info -> OPINFO geninfo CLINFO .)
-    CLVOBJ          reduce using rule 102 (info -> OPINFO geninfo CLINFO .)
     VIDAT           reduce using rule 102 (info -> OPINFO geninfo CLINFO .)
-    CLIMOBJ         reduce using rule 102 (info -> OPINFO geninfo CLINFO .)
     IMDATA          reduce using rule 102 (info -> OPINFO geninfo CLINFO .)
 
 
@@ -7070,12 +7064,10 @@ state 175
     (329) mediaObject -> OPMOBJ info . imageObject CLMOBJ
     (332) mediaObject -> OPMOBJ info . videoObject genMO CLMOBJ
     (333) mediaObject -> OPMOBJ info . imageObject genMO CLMOBJ
-    (340) videoObject -> . OPVOBJ info CLVOBJ
-    (341) videoObject -> . OPVOBJ VIDAT CLVOBJ
-    (342) videoObject -> . OPVOBJ info VIDAT CLVOBJ
-    (343) imageObject -> . OPIMOBJ info CLIMOBJ
-    (344) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
-    (345) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
+    (343) videoObject -> . OPVOBJ VIDAT CLVOBJ
+    (344) videoObject -> . OPVOBJ info VIDAT CLVOBJ
+    (345) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
+    (346) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
 
     OPVOBJ          shift and go to state 178
     OPIMOBJ         shift and go to state 179
@@ -7091,12 +7083,10 @@ state 176
     (337) genMO -> . imageObject
     (338) genMO -> . videoObject genMO
     (339) genMO -> . imageObject genMO
-    (340) videoObject -> . OPVOBJ info CLVOBJ
-    (341) videoObject -> . OPVOBJ VIDAT CLVOBJ
-    (342) videoObject -> . OPVOBJ info VIDAT CLVOBJ
-    (343) imageObject -> . OPIMOBJ info CLIMOBJ
-    (344) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
-    (345) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
+    (343) videoObject -> . OPVOBJ VIDAT CLVOBJ
+    (344) videoObject -> . OPVOBJ info VIDAT CLVOBJ
+    (345) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
+    (346) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
 
     CLMOBJ          shift and go to state 357
     OPVOBJ          shift and go to state 178
@@ -7114,12 +7104,10 @@ state 177
     (337) genMO -> . imageObject
     (338) genMO -> . videoObject genMO
     (339) genMO -> . imageObject genMO
-    (340) videoObject -> . OPVOBJ info CLVOBJ
-    (341) videoObject -> . OPVOBJ VIDAT CLVOBJ
-    (342) videoObject -> . OPVOBJ info VIDAT CLVOBJ
-    (343) imageObject -> . OPIMOBJ info CLIMOBJ
-    (344) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
-    (345) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
+    (343) videoObject -> . OPVOBJ VIDAT CLVOBJ
+    (344) videoObject -> . OPVOBJ info VIDAT CLVOBJ
+    (345) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
+    (346) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
 
     CLMOBJ          shift and go to state 360
     OPVOBJ          shift and go to state 178
@@ -7131,27 +7119,25 @@ state 177
 
 state 178
 
-    (340) videoObject -> OPVOBJ . info CLVOBJ
-    (341) videoObject -> OPVOBJ . VIDAT CLVOBJ
-    (342) videoObject -> OPVOBJ . info VIDAT CLVOBJ
+    (343) videoObject -> OPVOBJ . VIDAT CLVOBJ
+    (344) videoObject -> OPVOBJ . info VIDAT CLVOBJ
     (102) info -> . OPINFO geninfo CLINFO
 
-    VIDAT           shift and go to state 363
+    VIDAT           shift and go to state 362
     OPINFO          shift and go to state 9
 
-    info                           shift and go to state 362
+    info                           shift and go to state 363
 
 state 179
 
-    (343) imageObject -> OPIMOBJ . info CLIMOBJ
-    (344) imageObject -> OPIMOBJ . IMDATA CLIMOBJ
-    (345) imageObject -> OPIMOBJ . info IMDATA CLIMOBJ
+    (345) imageObject -> OPIMOBJ . IMDATA CLIMOBJ
+    (346) imageObject -> OPIMOBJ . info IMDATA CLIMOBJ
     (102) info -> . OPINFO geninfo CLINFO
 
-    IMDATA          shift and go to state 365
+    IMDATA          shift and go to state 364
     OPINFO          shift and go to state 9
 
-    info                           shift and go to state 364
+    info                           shift and go to state 365
 
 state 180
 
@@ -7776,70 +7762,70 @@ state 203
 
 state 204
 
-    (346) itemizedList -> OPILIST genIList CLILIST .
+    (340) itemizedList -> OPILIST genIList CLILIST .
 
-    OPILIST         reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    OPIMPORT        reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    OPPARA          reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    OPSPARA         reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    OPADD           reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    OPINTAB         reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    OPCOM           reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    OPABST          reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    OPSSECT         reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    OPSECT          reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    CLART           reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    OPMOBJ          reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    CLIMPORT        reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    TEXTO           reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    OPEMPH          reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    OPLINK          reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    OPEMAIL         reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    OPAUTHOR        reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    CLPARA          reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    CLSECT          reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    CLSSECT         reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    CLLITEM         reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
-    CLENTRY         reduce using rule 346 (itemizedList -> OPILIST genIList CLILIST .)
+    OPILIST         reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    OPIMPORT        reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    OPPARA          reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    OPSPARA         reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    OPADD           reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    OPINTAB         reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    OPCOM           reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    OPABST          reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    OPSSECT         reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    OPSECT          reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    CLART           reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    OPMOBJ          reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    CLIMPORT        reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    TEXTO           reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    OPEMPH          reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    OPLINK          reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    OPEMAIL         reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    OPAUTHOR        reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    CLPARA          reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    CLSECT          reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    CLSSECT         reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    CLLITEM         reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
+    CLENTRY         reduce using rule 340 (itemizedList -> OPILIST genIList CLILIST .)
 
 
 state 205
 
-    (348) genIList -> listItem genIList .
+    (342) genIList -> listItem genIList .
 
-    CLILIST         reduce using rule 348 (genIList -> listItem genIList .)
+    CLILIST         reduce using rule 342 (genIList -> listItem genIList .)
 
 
 state 206
 
-    (349) listItem -> OPLITEM genlistItem . CLLITEM
+    (347) listItem -> OPLITEM genlistItem . CLLITEM
 
     CLLITEM         shift and go to state 385
 
 
 state 207
 
-    (350) genlistItem -> itemizedList .
-    (359) genlistItem -> itemizedList . genlistItem
-    (350) genlistItem -> . itemizedList
-    (351) genlistItem -> . important
-    (352) genlistItem -> . para
-    (353) genlistItem -> . simpara
-    (354) genlistItem -> . address
-    (355) genlistItem -> . mediaObject
-    (356) genlistItem -> . informalTable
-    (357) genlistItem -> . comment
-    (358) genlistItem -> . abstract
-    (359) genlistItem -> . itemizedList genlistItem
-    (360) genlistItem -> . important genlistItem
-    (361) genlistItem -> . para genlistItem
-    (362) genlistItem -> . simpara genlistItem
-    (363) genlistItem -> . address genlistItem
-    (364) genlistItem -> . mediaObject genlistItem
-    (365) genlistItem -> . informalTable genlistItem
-    (366) genlistItem -> . comment genlistItem
-    (367) genlistItem -> . abstract genlistItem
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (348) genlistItem -> itemizedList .
+    (357) genlistItem -> itemizedList . genlistItem
+    (348) genlistItem -> . itemizedList
+    (349) genlistItem -> . important
+    (350) genlistItem -> . para
+    (351) genlistItem -> . simpara
+    (352) genlistItem -> . address
+    (353) genlistItem -> . mediaObject
+    (354) genlistItem -> . informalTable
+    (355) genlistItem -> . comment
+    (356) genlistItem -> . abstract
+    (357) genlistItem -> . itemizedList genlistItem
+    (358) genlistItem -> . important genlistItem
+    (359) genlistItem -> . para genlistItem
+    (360) genlistItem -> . simpara genlistItem
+    (361) genlistItem -> . address genlistItem
+    (362) genlistItem -> . mediaObject genlistItem
+    (363) genlistItem -> . informalTable genlistItem
+    (364) genlistItem -> . comment genlistItem
+    (365) genlistItem -> . abstract genlistItem
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -7854,13 +7840,13 @@ state 207
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    CLLITEM         reduce using rule 350 (genlistItem -> itemizedList .)
+    CLLITEM         reduce using rule 348 (genlistItem -> itemizedList .)
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -7884,27 +7870,27 @@ state 207
 
 state 208
 
-    (351) genlistItem -> important .
-    (360) genlistItem -> important . genlistItem
-    (350) genlistItem -> . itemizedList
-    (351) genlistItem -> . important
-    (352) genlistItem -> . para
-    (353) genlistItem -> . simpara
-    (354) genlistItem -> . address
-    (355) genlistItem -> . mediaObject
-    (356) genlistItem -> . informalTable
-    (357) genlistItem -> . comment
-    (358) genlistItem -> . abstract
-    (359) genlistItem -> . itemizedList genlistItem
-    (360) genlistItem -> . important genlistItem
-    (361) genlistItem -> . para genlistItem
-    (362) genlistItem -> . simpara genlistItem
-    (363) genlistItem -> . address genlistItem
-    (364) genlistItem -> . mediaObject genlistItem
-    (365) genlistItem -> . informalTable genlistItem
-    (366) genlistItem -> . comment genlistItem
-    (367) genlistItem -> . abstract genlistItem
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (349) genlistItem -> important .
+    (358) genlistItem -> important . genlistItem
+    (348) genlistItem -> . itemizedList
+    (349) genlistItem -> . important
+    (350) genlistItem -> . para
+    (351) genlistItem -> . simpara
+    (352) genlistItem -> . address
+    (353) genlistItem -> . mediaObject
+    (354) genlistItem -> . informalTable
+    (355) genlistItem -> . comment
+    (356) genlistItem -> . abstract
+    (357) genlistItem -> . itemizedList genlistItem
+    (358) genlistItem -> . important genlistItem
+    (359) genlistItem -> . para genlistItem
+    (360) genlistItem -> . simpara genlistItem
+    (361) genlistItem -> . address genlistItem
+    (362) genlistItem -> . mediaObject genlistItem
+    (363) genlistItem -> . informalTable genlistItem
+    (364) genlistItem -> . comment genlistItem
+    (365) genlistItem -> . abstract genlistItem
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -7919,13 +7905,13 @@ state 208
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    CLLITEM         reduce using rule 351 (genlistItem -> important .)
+    CLLITEM         reduce using rule 349 (genlistItem -> important .)
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -7949,27 +7935,27 @@ state 208
 
 state 209
 
-    (352) genlistItem -> para .
-    (361) genlistItem -> para . genlistItem
-    (350) genlistItem -> . itemizedList
-    (351) genlistItem -> . important
-    (352) genlistItem -> . para
-    (353) genlistItem -> . simpara
-    (354) genlistItem -> . address
-    (355) genlistItem -> . mediaObject
-    (356) genlistItem -> . informalTable
-    (357) genlistItem -> . comment
-    (358) genlistItem -> . abstract
-    (359) genlistItem -> . itemizedList genlistItem
-    (360) genlistItem -> . important genlistItem
-    (361) genlistItem -> . para genlistItem
-    (362) genlistItem -> . simpara genlistItem
-    (363) genlistItem -> . address genlistItem
-    (364) genlistItem -> . mediaObject genlistItem
-    (365) genlistItem -> . informalTable genlistItem
-    (366) genlistItem -> . comment genlistItem
-    (367) genlistItem -> . abstract genlistItem
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (350) genlistItem -> para .
+    (359) genlistItem -> para . genlistItem
+    (348) genlistItem -> . itemizedList
+    (349) genlistItem -> . important
+    (350) genlistItem -> . para
+    (351) genlistItem -> . simpara
+    (352) genlistItem -> . address
+    (353) genlistItem -> . mediaObject
+    (354) genlistItem -> . informalTable
+    (355) genlistItem -> . comment
+    (356) genlistItem -> . abstract
+    (357) genlistItem -> . itemizedList genlistItem
+    (358) genlistItem -> . important genlistItem
+    (359) genlistItem -> . para genlistItem
+    (360) genlistItem -> . simpara genlistItem
+    (361) genlistItem -> . address genlistItem
+    (362) genlistItem -> . mediaObject genlistItem
+    (363) genlistItem -> . informalTable genlistItem
+    (364) genlistItem -> . comment genlistItem
+    (365) genlistItem -> . abstract genlistItem
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -7984,13 +7970,13 @@ state 209
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    CLLITEM         reduce using rule 352 (genlistItem -> para .)
+    CLLITEM         reduce using rule 350 (genlistItem -> para .)
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -8014,27 +8000,27 @@ state 209
 
 state 210
 
-    (353) genlistItem -> simpara .
-    (362) genlistItem -> simpara . genlistItem
-    (350) genlistItem -> . itemizedList
-    (351) genlistItem -> . important
-    (352) genlistItem -> . para
-    (353) genlistItem -> . simpara
-    (354) genlistItem -> . address
-    (355) genlistItem -> . mediaObject
-    (356) genlistItem -> . informalTable
-    (357) genlistItem -> . comment
-    (358) genlistItem -> . abstract
-    (359) genlistItem -> . itemizedList genlistItem
-    (360) genlistItem -> . important genlistItem
-    (361) genlistItem -> . para genlistItem
-    (362) genlistItem -> . simpara genlistItem
-    (363) genlistItem -> . address genlistItem
-    (364) genlistItem -> . mediaObject genlistItem
-    (365) genlistItem -> . informalTable genlistItem
-    (366) genlistItem -> . comment genlistItem
-    (367) genlistItem -> . abstract genlistItem
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (351) genlistItem -> simpara .
+    (360) genlistItem -> simpara . genlistItem
+    (348) genlistItem -> . itemizedList
+    (349) genlistItem -> . important
+    (350) genlistItem -> . para
+    (351) genlistItem -> . simpara
+    (352) genlistItem -> . address
+    (353) genlistItem -> . mediaObject
+    (354) genlistItem -> . informalTable
+    (355) genlistItem -> . comment
+    (356) genlistItem -> . abstract
+    (357) genlistItem -> . itemizedList genlistItem
+    (358) genlistItem -> . important genlistItem
+    (359) genlistItem -> . para genlistItem
+    (360) genlistItem -> . simpara genlistItem
+    (361) genlistItem -> . address genlistItem
+    (362) genlistItem -> . mediaObject genlistItem
+    (363) genlistItem -> . informalTable genlistItem
+    (364) genlistItem -> . comment genlistItem
+    (365) genlistItem -> . abstract genlistItem
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -8049,13 +8035,13 @@ state 210
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    CLLITEM         reduce using rule 353 (genlistItem -> simpara .)
+    CLLITEM         reduce using rule 351 (genlistItem -> simpara .)
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -8079,27 +8065,27 @@ state 210
 
 state 211
 
-    (354) genlistItem -> address .
-    (363) genlistItem -> address . genlistItem
-    (350) genlistItem -> . itemizedList
-    (351) genlistItem -> . important
-    (352) genlistItem -> . para
-    (353) genlistItem -> . simpara
-    (354) genlistItem -> . address
-    (355) genlistItem -> . mediaObject
-    (356) genlistItem -> . informalTable
-    (357) genlistItem -> . comment
-    (358) genlistItem -> . abstract
-    (359) genlistItem -> . itemizedList genlistItem
-    (360) genlistItem -> . important genlistItem
-    (361) genlistItem -> . para genlistItem
-    (362) genlistItem -> . simpara genlistItem
-    (363) genlistItem -> . address genlistItem
-    (364) genlistItem -> . mediaObject genlistItem
-    (365) genlistItem -> . informalTable genlistItem
-    (366) genlistItem -> . comment genlistItem
-    (367) genlistItem -> . abstract genlistItem
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (352) genlistItem -> address .
+    (361) genlistItem -> address . genlistItem
+    (348) genlistItem -> . itemizedList
+    (349) genlistItem -> . important
+    (350) genlistItem -> . para
+    (351) genlistItem -> . simpara
+    (352) genlistItem -> . address
+    (353) genlistItem -> . mediaObject
+    (354) genlistItem -> . informalTable
+    (355) genlistItem -> . comment
+    (356) genlistItem -> . abstract
+    (357) genlistItem -> . itemizedList genlistItem
+    (358) genlistItem -> . important genlistItem
+    (359) genlistItem -> . para genlistItem
+    (360) genlistItem -> . simpara genlistItem
+    (361) genlistItem -> . address genlistItem
+    (362) genlistItem -> . mediaObject genlistItem
+    (363) genlistItem -> . informalTable genlistItem
+    (364) genlistItem -> . comment genlistItem
+    (365) genlistItem -> . abstract genlistItem
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -8114,13 +8100,13 @@ state 211
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    CLLITEM         reduce using rule 354 (genlistItem -> address .)
+    CLLITEM         reduce using rule 352 (genlistItem -> address .)
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -8144,27 +8130,27 @@ state 211
 
 state 212
 
-    (355) genlistItem -> mediaObject .
-    (364) genlistItem -> mediaObject . genlistItem
-    (350) genlistItem -> . itemizedList
-    (351) genlistItem -> . important
-    (352) genlistItem -> . para
-    (353) genlistItem -> . simpara
-    (354) genlistItem -> . address
-    (355) genlistItem -> . mediaObject
-    (356) genlistItem -> . informalTable
-    (357) genlistItem -> . comment
-    (358) genlistItem -> . abstract
-    (359) genlistItem -> . itemizedList genlistItem
-    (360) genlistItem -> . important genlistItem
-    (361) genlistItem -> . para genlistItem
-    (362) genlistItem -> . simpara genlistItem
-    (363) genlistItem -> . address genlistItem
-    (364) genlistItem -> . mediaObject genlistItem
-    (365) genlistItem -> . informalTable genlistItem
-    (366) genlistItem -> . comment genlistItem
-    (367) genlistItem -> . abstract genlistItem
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (353) genlistItem -> mediaObject .
+    (362) genlistItem -> mediaObject . genlistItem
+    (348) genlistItem -> . itemizedList
+    (349) genlistItem -> . important
+    (350) genlistItem -> . para
+    (351) genlistItem -> . simpara
+    (352) genlistItem -> . address
+    (353) genlistItem -> . mediaObject
+    (354) genlistItem -> . informalTable
+    (355) genlistItem -> . comment
+    (356) genlistItem -> . abstract
+    (357) genlistItem -> . itemizedList genlistItem
+    (358) genlistItem -> . important genlistItem
+    (359) genlistItem -> . para genlistItem
+    (360) genlistItem -> . simpara genlistItem
+    (361) genlistItem -> . address genlistItem
+    (362) genlistItem -> . mediaObject genlistItem
+    (363) genlistItem -> . informalTable genlistItem
+    (364) genlistItem -> . comment genlistItem
+    (365) genlistItem -> . abstract genlistItem
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -8179,13 +8165,13 @@ state 212
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    CLLITEM         reduce using rule 355 (genlistItem -> mediaObject .)
+    CLLITEM         reduce using rule 353 (genlistItem -> mediaObject .)
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -8209,27 +8195,27 @@ state 212
 
 state 213
 
-    (356) genlistItem -> informalTable .
-    (365) genlistItem -> informalTable . genlistItem
-    (350) genlistItem -> . itemizedList
-    (351) genlistItem -> . important
-    (352) genlistItem -> . para
-    (353) genlistItem -> . simpara
-    (354) genlistItem -> . address
-    (355) genlistItem -> . mediaObject
-    (356) genlistItem -> . informalTable
-    (357) genlistItem -> . comment
-    (358) genlistItem -> . abstract
-    (359) genlistItem -> . itemizedList genlistItem
-    (360) genlistItem -> . important genlistItem
-    (361) genlistItem -> . para genlistItem
-    (362) genlistItem -> . simpara genlistItem
-    (363) genlistItem -> . address genlistItem
-    (364) genlistItem -> . mediaObject genlistItem
-    (365) genlistItem -> . informalTable genlistItem
-    (366) genlistItem -> . comment genlistItem
-    (367) genlistItem -> . abstract genlistItem
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (354) genlistItem -> informalTable .
+    (363) genlistItem -> informalTable . genlistItem
+    (348) genlistItem -> . itemizedList
+    (349) genlistItem -> . important
+    (350) genlistItem -> . para
+    (351) genlistItem -> . simpara
+    (352) genlistItem -> . address
+    (353) genlistItem -> . mediaObject
+    (354) genlistItem -> . informalTable
+    (355) genlistItem -> . comment
+    (356) genlistItem -> . abstract
+    (357) genlistItem -> . itemizedList genlistItem
+    (358) genlistItem -> . important genlistItem
+    (359) genlistItem -> . para genlistItem
+    (360) genlistItem -> . simpara genlistItem
+    (361) genlistItem -> . address genlistItem
+    (362) genlistItem -> . mediaObject genlistItem
+    (363) genlistItem -> . informalTable genlistItem
+    (364) genlistItem -> . comment genlistItem
+    (365) genlistItem -> . abstract genlistItem
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -8244,13 +8230,13 @@ state 213
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    CLLITEM         reduce using rule 356 (genlistItem -> informalTable .)
+    CLLITEM         reduce using rule 354 (genlistItem -> informalTable .)
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -8274,27 +8260,27 @@ state 213
 
 state 214
 
-    (357) genlistItem -> comment .
-    (366) genlistItem -> comment . genlistItem
-    (350) genlistItem -> . itemizedList
-    (351) genlistItem -> . important
-    (352) genlistItem -> . para
-    (353) genlistItem -> . simpara
-    (354) genlistItem -> . address
-    (355) genlistItem -> . mediaObject
-    (356) genlistItem -> . informalTable
-    (357) genlistItem -> . comment
-    (358) genlistItem -> . abstract
-    (359) genlistItem -> . itemizedList genlistItem
-    (360) genlistItem -> . important genlistItem
-    (361) genlistItem -> . para genlistItem
-    (362) genlistItem -> . simpara genlistItem
-    (363) genlistItem -> . address genlistItem
-    (364) genlistItem -> . mediaObject genlistItem
-    (365) genlistItem -> . informalTable genlistItem
-    (366) genlistItem -> . comment genlistItem
-    (367) genlistItem -> . abstract genlistItem
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (355) genlistItem -> comment .
+    (364) genlistItem -> comment . genlistItem
+    (348) genlistItem -> . itemizedList
+    (349) genlistItem -> . important
+    (350) genlistItem -> . para
+    (351) genlistItem -> . simpara
+    (352) genlistItem -> . address
+    (353) genlistItem -> . mediaObject
+    (354) genlistItem -> . informalTable
+    (355) genlistItem -> . comment
+    (356) genlistItem -> . abstract
+    (357) genlistItem -> . itemizedList genlistItem
+    (358) genlistItem -> . important genlistItem
+    (359) genlistItem -> . para genlistItem
+    (360) genlistItem -> . simpara genlistItem
+    (361) genlistItem -> . address genlistItem
+    (362) genlistItem -> . mediaObject genlistItem
+    (363) genlistItem -> . informalTable genlistItem
+    (364) genlistItem -> . comment genlistItem
+    (365) genlistItem -> . abstract genlistItem
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -8309,13 +8295,13 @@ state 214
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    CLLITEM         reduce using rule 357 (genlistItem -> comment .)
+    CLLITEM         reduce using rule 355 (genlistItem -> comment .)
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -8339,27 +8325,27 @@ state 214
 
 state 215
 
-    (358) genlistItem -> abstract .
-    (367) genlistItem -> abstract . genlistItem
-    (350) genlistItem -> . itemizedList
-    (351) genlistItem -> . important
-    (352) genlistItem -> . para
-    (353) genlistItem -> . simpara
-    (354) genlistItem -> . address
-    (355) genlistItem -> . mediaObject
-    (356) genlistItem -> . informalTable
-    (357) genlistItem -> . comment
-    (358) genlistItem -> . abstract
-    (359) genlistItem -> . itemizedList genlistItem
-    (360) genlistItem -> . important genlistItem
-    (361) genlistItem -> . para genlistItem
-    (362) genlistItem -> . simpara genlistItem
-    (363) genlistItem -> . address genlistItem
-    (364) genlistItem -> . mediaObject genlistItem
-    (365) genlistItem -> . informalTable genlistItem
-    (366) genlistItem -> . comment genlistItem
-    (367) genlistItem -> . abstract genlistItem
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (356) genlistItem -> abstract .
+    (365) genlistItem -> abstract . genlistItem
+    (348) genlistItem -> . itemizedList
+    (349) genlistItem -> . important
+    (350) genlistItem -> . para
+    (351) genlistItem -> . simpara
+    (352) genlistItem -> . address
+    (353) genlistItem -> . mediaObject
+    (354) genlistItem -> . informalTable
+    (355) genlistItem -> . comment
+    (356) genlistItem -> . abstract
+    (357) genlistItem -> . itemizedList genlistItem
+    (358) genlistItem -> . important genlistItem
+    (359) genlistItem -> . para genlistItem
+    (360) genlistItem -> . simpara genlistItem
+    (361) genlistItem -> . address genlistItem
+    (362) genlistItem -> . mediaObject genlistItem
+    (363) genlistItem -> . informalTable genlistItem
+    (364) genlistItem -> . comment genlistItem
+    (365) genlistItem -> . abstract genlistItem
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -8374,13 +8360,13 @@ state 215
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    CLLITEM         reduce using rule 358 (genlistItem -> abstract .)
+    CLLITEM         reduce using rule 356 (genlistItem -> abstract .)
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -9208,101 +9194,101 @@ state 272
 
 state 273
 
-    (368) informalTable -> OPINTAB genIT1 CLINTAB .
+    (366) informalTable -> OPINTAB genIT1 CLINTAB .
 
-    OPILIST         reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    OPIMPORT        reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    OPPARA          reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    OPSPARA         reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    OPADD           reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    OPINTAB         reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    OPCOM           reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    OPABST          reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    OPSSECT         reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    OPSECT          reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    CLART           reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    OPMOBJ          reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    CLIMPORT        reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    TEXTO           reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    OPEMPH          reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    OPLINK          reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    OPEMAIL         reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    OPAUTHOR        reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    CLPARA          reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    CLSECT          reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    CLSSECT         reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
-    CLLITEM         reduce using rule 368 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    OPILIST         reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    OPIMPORT        reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    OPPARA          reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    OPSPARA         reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    OPADD           reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    OPINTAB         reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    OPCOM           reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    OPABST          reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    OPSSECT         reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    OPSECT          reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    CLART           reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    OPMOBJ          reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    CLIMPORT        reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    TEXTO           reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    OPEMPH          reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    OPLINK          reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    OPEMAIL         reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    OPAUTHOR        reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    CLPARA          reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    CLSECT          reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    CLSSECT         reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
+    CLLITEM         reduce using rule 366 (informalTable -> OPINTAB genIT1 CLINTAB .)
 
 
 state 274
 
-    (369) informalTable -> OPINTAB genIT2 CLINTAB .
+    (367) informalTable -> OPINTAB genIT2 CLINTAB .
 
-    OPILIST         reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    OPIMPORT        reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    OPPARA          reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    OPSPARA         reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    OPADD           reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    OPINTAB         reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    OPCOM           reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    OPABST          reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    OPSSECT         reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    OPSECT          reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    CLART           reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    OPMOBJ          reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    CLIMPORT        reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    TEXTO           reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    OPEMPH          reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    OPLINK          reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    OPEMAIL         reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    OPAUTHOR        reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    CLPARA          reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    CLSECT          reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    CLSSECT         reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
-    CLLITEM         reduce using rule 369 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    OPILIST         reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    OPIMPORT        reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    OPPARA          reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    OPSPARA         reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    OPADD           reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    OPINTAB         reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    OPCOM           reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    OPABST          reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    OPSSECT         reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    OPSECT          reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    CLART           reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    OPMOBJ          reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    CLIMPORT        reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    TEXTO           reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    OPEMPH          reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    OPLINK          reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    OPEMAIL         reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    OPAUTHOR        reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    CLPARA          reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    CLSECT          reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    CLSSECT         reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
+    CLLITEM         reduce using rule 367 (informalTable -> OPINTAB genIT2 CLINTAB .)
 
 
 state 275
 
-    (371) genIT1 -> address genIT1 .
+    (369) genIT1 -> address genIT1 .
 
-    CLINTAB         reduce using rule 371 (genIT1 -> address genIT1 .)
+    CLINTAB         reduce using rule 369 (genIT1 -> address genIT1 .)
 
 
 state 276
 
-    (373) genIT2 -> tGroup genIT2 .
+    (371) genIT2 -> tGroup genIT2 .
 
-    CLINTAB         reduce using rule 373 (genIT2 -> tGroup genIT2 .)
+    CLINTAB         reduce using rule 371 (genIT2 -> tGroup genIT2 .)
 
 
 state 277
 
-    (374) tGroup -> OPTGROUP thead . CLTGROUP
+    (372) tGroup -> OPTGROUP thead . CLTGROUP
 
     CLTGROUP        shift and go to state 416
 
 
 state 278
 
-    (375) tGroup -> OPTGROUP tfoot . CLTGROUP
+    (373) tGroup -> OPTGROUP tfoot . CLTGROUP
 
     CLTGROUP        shift and go to state 417
 
 
 state 279
 
-    (376) tGroup -> OPTGROUP tbody . CLTGROUP
+    (374) tGroup -> OPTGROUP tbody . CLTGROUP
 
     CLTGROUP        shift and go to state 418
 
 
 state 280
 
-    (377) thead -> OPHEAD . genHFB CLHEAD
-    (380) genHFB -> . row
-    (381) genHFB -> . row genHFB
-    (382) row -> . OPROW genrow CLROW
+    (375) thead -> OPHEAD . genHFB CLHEAD
+    (378) genHFB -> . row
+    (379) genHFB -> . row genHFB
+    (380) row -> . OPROW genrow CLROW
 
     OPROW           shift and go to state 421
 
@@ -9311,10 +9297,10 @@ state 280
 
 state 281
 
-    (378) tfoot -> OPFOOT . genHFB CLFOOT
-    (380) genHFB -> . row
-    (381) genHFB -> . row genHFB
-    (382) row -> . OPROW genrow CLROW
+    (376) tfoot -> OPFOOT . genHFB CLFOOT
+    (378) genHFB -> . row
+    (379) genHFB -> . row genHFB
+    (380) row -> . OPROW genrow CLROW
 
     OPROW           shift and go to state 421
 
@@ -9323,10 +9309,10 @@ state 281
 
 state 282
 
-    (379) tbody -> OPBODY . genHFB CLBODY
-    (380) genHFB -> . row
-    (381) genHFB -> . row genHFB
-    (382) row -> . OPROW genrow CLROW
+    (377) tbody -> OPBODY . genHFB CLBODY
+    (378) genHFB -> . row
+    (379) genHFB -> . row genHFB
+    (380) row -> . OPROW genrow CLROW
 
     OPROW           shift and go to state 421
 
@@ -9540,7 +9526,7 @@ state 297
     (59) genSect1 -> . informalTable genSect1
     (60) genSect1 -> . comment genSect1
     (61) genSect1 -> . abstract genSect1
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -9555,8 +9541,8 @@ state 297
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -9791,7 +9777,7 @@ state 314
     (85) genSSect -> . informalTable genSSect
     (86) genSSect -> . comment genSSect
     (87) genSSect -> . abstract genSSect
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -9806,8 +9792,8 @@ state 314
     (333) mediaObject -> . OPMOBJ info imageObject genMO CLMOBJ
     (334) mediaObject -> . OPMOBJ videoObject genMO CLMOBJ
     (335) mediaObject -> . OPMOBJ imageObject genMO CLMOBJ
-    (368) informalTable -> . OPINTAB genIT1 CLINTAB
-    (369) informalTable -> . OPINTAB genIT2 CLINTAB
+    (366) informalTable -> . OPINTAB genIT1 CLINTAB
+    (367) informalTable -> . OPINTAB genIT2 CLINTAB
     (169) comment -> . OPCOM genCom CLCOM
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
@@ -10416,12 +10402,10 @@ state 354
     (337) genMO -> . imageObject
     (338) genMO -> . videoObject genMO
     (339) genMO -> . imageObject genMO
-    (340) videoObject -> . OPVOBJ info CLVOBJ
-    (341) videoObject -> . OPVOBJ VIDAT CLVOBJ
-    (342) videoObject -> . OPVOBJ info VIDAT CLVOBJ
-    (343) imageObject -> . OPIMOBJ info CLIMOBJ
-    (344) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
-    (345) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
+    (343) videoObject -> . OPVOBJ VIDAT CLVOBJ
+    (344) videoObject -> . OPVOBJ info VIDAT CLVOBJ
+    (345) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
+    (346) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
 
     CLMOBJ          shift and go to state 461
     OPVOBJ          shift and go to state 178
@@ -10439,12 +10423,10 @@ state 355
     (337) genMO -> . imageObject
     (338) genMO -> . videoObject genMO
     (339) genMO -> . imageObject genMO
-    (340) videoObject -> . OPVOBJ info CLVOBJ
-    (341) videoObject -> . OPVOBJ VIDAT CLVOBJ
-    (342) videoObject -> . OPVOBJ info VIDAT CLVOBJ
-    (343) imageObject -> . OPIMOBJ info CLIMOBJ
-    (344) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
-    (345) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
+    (343) videoObject -> . OPVOBJ VIDAT CLVOBJ
+    (344) videoObject -> . OPVOBJ info VIDAT CLVOBJ
+    (345) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
+    (346) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
 
     CLMOBJ          shift and go to state 463
     OPVOBJ          shift and go to state 178
@@ -10462,12 +10444,10 @@ state 356
     (337) genMO -> . imageObject
     (338) genMO -> . videoObject genMO
     (339) genMO -> . imageObject genMO
-    (340) videoObject -> . OPVOBJ info CLVOBJ
-    (341) videoObject -> . OPVOBJ VIDAT CLVOBJ
-    (342) videoObject -> . OPVOBJ info VIDAT CLVOBJ
-    (343) imageObject -> . OPIMOBJ info CLIMOBJ
-    (344) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
-    (345) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
+    (343) videoObject -> . OPVOBJ VIDAT CLVOBJ
+    (344) videoObject -> . OPVOBJ info VIDAT CLVOBJ
+    (345) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
+    (346) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
 
     CLMOBJ          reduce using rule 336 (genMO -> videoObject .)
     OPVOBJ          shift and go to state 178
@@ -10523,12 +10503,10 @@ state 359
     (337) genMO -> . imageObject
     (338) genMO -> . videoObject genMO
     (339) genMO -> . imageObject genMO
-    (340) videoObject -> . OPVOBJ info CLVOBJ
-    (341) videoObject -> . OPVOBJ VIDAT CLVOBJ
-    (342) videoObject -> . OPVOBJ info VIDAT CLVOBJ
-    (343) imageObject -> . OPIMOBJ info CLIMOBJ
-    (344) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
-    (345) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
+    (343) videoObject -> . OPVOBJ VIDAT CLVOBJ
+    (344) videoObject -> . OPVOBJ info VIDAT CLVOBJ
+    (345) imageObject -> . OPIMOBJ IMDATA CLIMOBJ
+    (346) imageObject -> . OPIMOBJ info IMDATA CLIMOBJ
 
     CLMOBJ          reduce using rule 337 (genMO -> imageObject .)
     OPVOBJ          shift and go to state 178
@@ -10578,34 +10556,30 @@ state 361
 
 state 362
 
-    (340) videoObject -> OPVOBJ info . CLVOBJ
-    (342) videoObject -> OPVOBJ info . VIDAT CLVOBJ
+    (343) videoObject -> OPVOBJ VIDAT . CLVOBJ
 
     CLVOBJ          shift and go to state 469
-    VIDAT           shift and go to state 470
 
 
 state 363
 
-    (341) videoObject -> OPVOBJ VIDAT . CLVOBJ
+    (344) videoObject -> OPVOBJ info . VIDAT CLVOBJ
 
-    CLVOBJ          shift and go to state 471
+    VIDAT           shift and go to state 470
 
 
 state 364
 
-    (343) imageObject -> OPIMOBJ info . CLIMOBJ
-    (345) imageObject -> OPIMOBJ info . IMDATA CLIMOBJ
+    (345) imageObject -> OPIMOBJ IMDATA . CLIMOBJ
 
-    CLIMOBJ         shift and go to state 472
-    IMDATA          shift and go to state 473
+    CLIMOBJ         shift and go to state 471
 
 
 state 365
 
-    (344) imageObject -> OPIMOBJ IMDATA . CLIMOBJ
+    (346) imageObject -> OPIMOBJ info . IMDATA CLIMOBJ
 
-    CLIMOBJ         shift and go to state 474
+    IMDATA          shift and go to state 472
 
 
 state 366
@@ -10816,73 +10790,73 @@ state 384
 
 state 385
 
-    (349) listItem -> OPLITEM genlistItem CLLITEM .
+    (347) listItem -> OPLITEM genlistItem CLLITEM .
 
-    OPLITEM         reduce using rule 349 (listItem -> OPLITEM genlistItem CLLITEM .)
-    CLILIST         reduce using rule 349 (listItem -> OPLITEM genlistItem CLLITEM .)
+    OPLITEM         reduce using rule 347 (listItem -> OPLITEM genlistItem CLLITEM .)
+    CLILIST         reduce using rule 347 (listItem -> OPLITEM genlistItem CLLITEM .)
 
 
 state 386
 
-    (359) genlistItem -> itemizedList genlistItem .
+    (357) genlistItem -> itemizedList genlistItem .
 
-    CLLITEM         reduce using rule 359 (genlistItem -> itemizedList genlistItem .)
+    CLLITEM         reduce using rule 357 (genlistItem -> itemizedList genlistItem .)
 
 
 state 387
 
-    (360) genlistItem -> important genlistItem .
+    (358) genlistItem -> important genlistItem .
 
-    CLLITEM         reduce using rule 360 (genlistItem -> important genlistItem .)
+    CLLITEM         reduce using rule 358 (genlistItem -> important genlistItem .)
 
 
 state 388
 
-    (361) genlistItem -> para genlistItem .
+    (359) genlistItem -> para genlistItem .
 
-    CLLITEM         reduce using rule 361 (genlistItem -> para genlistItem .)
+    CLLITEM         reduce using rule 359 (genlistItem -> para genlistItem .)
 
 
 state 389
 
-    (362) genlistItem -> simpara genlistItem .
+    (360) genlistItem -> simpara genlistItem .
 
-    CLLITEM         reduce using rule 362 (genlistItem -> simpara genlistItem .)
+    CLLITEM         reduce using rule 360 (genlistItem -> simpara genlistItem .)
 
 
 state 390
 
-    (363) genlistItem -> address genlistItem .
+    (361) genlistItem -> address genlistItem .
 
-    CLLITEM         reduce using rule 363 (genlistItem -> address genlistItem .)
+    CLLITEM         reduce using rule 361 (genlistItem -> address genlistItem .)
 
 
 state 391
 
-    (364) genlistItem -> mediaObject genlistItem .
+    (362) genlistItem -> mediaObject genlistItem .
 
-    CLLITEM         reduce using rule 364 (genlistItem -> mediaObject genlistItem .)
+    CLLITEM         reduce using rule 362 (genlistItem -> mediaObject genlistItem .)
 
 
 state 392
 
-    (365) genlistItem -> informalTable genlistItem .
+    (363) genlistItem -> informalTable genlistItem .
 
-    CLLITEM         reduce using rule 365 (genlistItem -> informalTable genlistItem .)
+    CLLITEM         reduce using rule 363 (genlistItem -> informalTable genlistItem .)
 
 
 state 393
 
-    (366) genlistItem -> comment genlistItem .
+    (364) genlistItem -> comment genlistItem .
 
-    CLLITEM         reduce using rule 366 (genlistItem -> comment genlistItem .)
+    CLLITEM         reduce using rule 364 (genlistItem -> comment genlistItem .)
 
 
 state 394
 
-    (367) genlistItem -> abstract genlistItem .
+    (365) genlistItem -> abstract genlistItem .
 
-    CLLITEM         reduce using rule 367 (genlistItem -> abstract genlistItem .)
+    CLLITEM         reduce using rule 365 (genlistItem -> abstract genlistItem .)
 
 
 state 395
@@ -11080,75 +11054,75 @@ state 415
 
 state 416
 
-    (374) tGroup -> OPTGROUP thead CLTGROUP .
+    (372) tGroup -> OPTGROUP thead CLTGROUP .
 
-    OPTGROUP        reduce using rule 374 (tGroup -> OPTGROUP thead CLTGROUP .)
-    CLINTAB         reduce using rule 374 (tGroup -> OPTGROUP thead CLTGROUP .)
+    OPTGROUP        reduce using rule 372 (tGroup -> OPTGROUP thead CLTGROUP .)
+    CLINTAB         reduce using rule 372 (tGroup -> OPTGROUP thead CLTGROUP .)
 
 
 state 417
 
-    (375) tGroup -> OPTGROUP tfoot CLTGROUP .
+    (373) tGroup -> OPTGROUP tfoot CLTGROUP .
 
-    OPTGROUP        reduce using rule 375 (tGroup -> OPTGROUP tfoot CLTGROUP .)
-    CLINTAB         reduce using rule 375 (tGroup -> OPTGROUP tfoot CLTGROUP .)
+    OPTGROUP        reduce using rule 373 (tGroup -> OPTGROUP tfoot CLTGROUP .)
+    CLINTAB         reduce using rule 373 (tGroup -> OPTGROUP tfoot CLTGROUP .)
 
 
 state 418
 
-    (376) tGroup -> OPTGROUP tbody CLTGROUP .
+    (374) tGroup -> OPTGROUP tbody CLTGROUP .
 
-    OPTGROUP        reduce using rule 376 (tGroup -> OPTGROUP tbody CLTGROUP .)
-    CLINTAB         reduce using rule 376 (tGroup -> OPTGROUP tbody CLTGROUP .)
+    OPTGROUP        reduce using rule 374 (tGroup -> OPTGROUP tbody CLTGROUP .)
+    CLINTAB         reduce using rule 374 (tGroup -> OPTGROUP tbody CLTGROUP .)
 
 
 state 419
 
-    (377) thead -> OPHEAD genHFB . CLHEAD
+    (375) thead -> OPHEAD genHFB . CLHEAD
 
-    CLHEAD          shift and go to state 475
+    CLHEAD          shift and go to state 473
 
 
 state 420
 
-    (380) genHFB -> row .
-    (381) genHFB -> row . genHFB
-    (380) genHFB -> . row
-    (381) genHFB -> . row genHFB
-    (382) row -> . OPROW genrow CLROW
+    (378) genHFB -> row .
+    (379) genHFB -> row . genHFB
+    (378) genHFB -> . row
+    (379) genHFB -> . row genHFB
+    (380) row -> . OPROW genrow CLROW
 
-    CLHEAD          reduce using rule 380 (genHFB -> row .)
-    CLFOOT          reduce using rule 380 (genHFB -> row .)
-    CLBODY          reduce using rule 380 (genHFB -> row .)
+    CLHEAD          reduce using rule 378 (genHFB -> row .)
+    CLFOOT          reduce using rule 378 (genHFB -> row .)
+    CLBODY          reduce using rule 378 (genHFB -> row .)
     OPROW           shift and go to state 421
 
     row                            shift and go to state 420
-    genHFB                         shift and go to state 476
+    genHFB                         shift and go to state 474
 
 state 421
 
-    (382) row -> OPROW . genrow CLROW
-    (383) genrow -> . entry
-    (384) genrow -> . entry genrow
-    (385) entry -> . OPENTRY genentry CLENTRY
+    (380) row -> OPROW . genrow CLROW
+    (381) genrow -> . entry
+    (382) genrow -> . entry genrow
+    (383) entry -> . OPENTRY genentry CLENTRY
 
-    OPENTRY         shift and go to state 479
+    OPENTRY         shift and go to state 477
 
-    genrow                         shift and go to state 477
-    entry                          shift and go to state 478
+    genrow                         shift and go to state 475
+    entry                          shift and go to state 476
 
 state 422
 
-    (378) tfoot -> OPFOOT genHFB . CLFOOT
+    (376) tfoot -> OPFOOT genHFB . CLFOOT
 
-    CLFOOT          shift and go to state 480
+    CLFOOT          shift and go to state 478
 
 
 state 423
 
-    (379) tbody -> OPBODY genHFB . CLBODY
+    (377) tbody -> OPBODY genHFB . CLBODY
 
-    CLBODY          shift and go to state 481
+    CLBODY          shift and go to state 479
 
 
 state 424
@@ -11193,14 +11167,14 @@ state 426
 
     (36) section -> OPSECT info genSect1 genSect2 . CLSECT
 
-    CLSECT          shift and go to state 482
+    CLSECT          shift and go to state 480
 
 
 state 427
 
     (40) section -> OPSECT info genSect1 genSect3 . CLSECT
 
-    CLSECT          shift and go to state 483
+    CLSECT          shift and go to state 481
 
 
 state 428
@@ -11229,12 +11203,12 @@ state 428
     (42) section -> . OPSECT info title genSect1 genSect3 CLSECT
     (43) section -> . OPSECT genSect1 genSect3 CLSECT
 
-    CLSECT          shift and go to state 484
+    CLSECT          shift and go to state 482
     OPSSECT         shift and go to state 34
     OPSECT          shift and go to state 31
 
-    genSect2                       shift and go to state 485
-    genSect3                       shift and go to state 486
+    genSect2                       shift and go to state 483
+    genSect3                       shift and go to state 484
     simpleSec                      shift and go to state 301
     section                        shift and go to state 302
 
@@ -11283,14 +11257,14 @@ state 434
 
     (37) section -> OPSECT title genSect1 genSect2 . CLSECT
 
-    CLSECT          shift and go to state 487
+    CLSECT          shift and go to state 485
 
 
 state 435
 
     (41) section -> OPSECT title genSect1 genSect3 . CLSECT
 
-    CLSECT          shift and go to state 488
+    CLSECT          shift and go to state 486
 
 
 state 436
@@ -11306,7 +11280,7 @@ state 437
 
     (68) simpleSec -> OPSSECT info title genSSect . CLSSECT
 
-    CLSSECT         shift and go to state 489
+    CLSSECT         shift and go to state 487
 
 
 state 438
@@ -11417,7 +11391,7 @@ state 451
 
     (319) holder -> OPHOLDER genholder . CLHOLDER
 
-    CLHOLDER        shift and go to state 490
+    CLHOLDER        shift and go to state 488
 
 
 state 452
@@ -11442,7 +11416,7 @@ state 452
     OPEMPH          shift and go to state 53
     OPCOM           shift and go to state 25
 
-    genholder                      shift and go to state 491
+    genholder                      shift and go to state 489
     link                           shift and go to state 453
     emphasis                       shift and go to state 454
     comment                        shift and go to state 455
@@ -11470,7 +11444,7 @@ state 453
     OPCOM           shift and go to state 25
 
     link                           shift and go to state 453
-    genholder                      shift and go to state 492
+    genholder                      shift and go to state 490
     emphasis                       shift and go to state 454
     comment                        shift and go to state 455
 
@@ -11497,7 +11471,7 @@ state 454
     OPCOM           shift and go to state 25
 
     emphasis                       shift and go to state 454
-    genholder                      shift and go to state 493
+    genholder                      shift and go to state 491
     link                           shift and go to state 453
     comment                        shift and go to state 455
 
@@ -11524,7 +11498,7 @@ state 455
     OPCOM           shift and go to state 25
 
     comment                        shift and go to state 455
-    genholder                      shift and go to state 494
+    genholder                      shift and go to state 492
     link                           shift and go to state 453
     emphasis                       shift and go to state 454
 
@@ -11600,7 +11574,7 @@ state 462
 
     (332) mediaObject -> OPMOBJ info videoObject genMO . CLMOBJ
 
-    CLMOBJ          shift and go to state 495
+    CLMOBJ          shift and go to state 493
 
 
 state 463
@@ -11638,7 +11612,7 @@ state 464
 
     (333) mediaObject -> OPMOBJ info imageObject genMO . CLMOBJ
 
-    CLMOBJ          shift and go to state 496
+    CLMOBJ          shift and go to state 494
 
 
 state 465
@@ -11719,111 +11693,93 @@ state 468
 
 state 469
 
-    (340) videoObject -> OPVOBJ info CLVOBJ .
+    (343) videoObject -> OPVOBJ VIDAT CLVOBJ .
 
-    CLMOBJ          reduce using rule 340 (videoObject -> OPVOBJ info CLVOBJ .)
-    OPVOBJ          reduce using rule 340 (videoObject -> OPVOBJ info CLVOBJ .)
-    OPIMOBJ         reduce using rule 340 (videoObject -> OPVOBJ info CLVOBJ .)
+    CLMOBJ          reduce using rule 343 (videoObject -> OPVOBJ VIDAT CLVOBJ .)
+    OPVOBJ          reduce using rule 343 (videoObject -> OPVOBJ VIDAT CLVOBJ .)
+    OPIMOBJ         reduce using rule 343 (videoObject -> OPVOBJ VIDAT CLVOBJ .)
 
 
 state 470
 
-    (342) videoObject -> OPVOBJ info VIDAT . CLVOBJ
+    (344) videoObject -> OPVOBJ info VIDAT . CLVOBJ
 
-    CLVOBJ          shift and go to state 497
+    CLVOBJ          shift and go to state 495
 
 
 state 471
 
-    (341) videoObject -> OPVOBJ VIDAT CLVOBJ .
+    (345) imageObject -> OPIMOBJ IMDATA CLIMOBJ .
 
-    CLMOBJ          reduce using rule 341 (videoObject -> OPVOBJ VIDAT CLVOBJ .)
-    OPVOBJ          reduce using rule 341 (videoObject -> OPVOBJ VIDAT CLVOBJ .)
-    OPIMOBJ         reduce using rule 341 (videoObject -> OPVOBJ VIDAT CLVOBJ .)
+    CLMOBJ          reduce using rule 345 (imageObject -> OPIMOBJ IMDATA CLIMOBJ .)
+    OPVOBJ          reduce using rule 345 (imageObject -> OPIMOBJ IMDATA CLIMOBJ .)
+    OPIMOBJ         reduce using rule 345 (imageObject -> OPIMOBJ IMDATA CLIMOBJ .)
 
 
 state 472
 
-    (343) imageObject -> OPIMOBJ info CLIMOBJ .
+    (346) imageObject -> OPIMOBJ info IMDATA . CLIMOBJ
 
-    CLMOBJ          reduce using rule 343 (imageObject -> OPIMOBJ info CLIMOBJ .)
-    OPVOBJ          reduce using rule 343 (imageObject -> OPIMOBJ info CLIMOBJ .)
-    OPIMOBJ         reduce using rule 343 (imageObject -> OPIMOBJ info CLIMOBJ .)
+    CLIMOBJ         shift and go to state 496
 
 
 state 473
 
-    (345) imageObject -> OPIMOBJ info IMDATA . CLIMOBJ
+    (375) thead -> OPHEAD genHFB CLHEAD .
 
-    CLIMOBJ         shift and go to state 498
+    CLTGROUP        reduce using rule 375 (thead -> OPHEAD genHFB CLHEAD .)
 
 
 state 474
 
-    (344) imageObject -> OPIMOBJ IMDATA CLIMOBJ .
+    (379) genHFB -> row genHFB .
 
-    CLMOBJ          reduce using rule 344 (imageObject -> OPIMOBJ IMDATA CLIMOBJ .)
-    OPVOBJ          reduce using rule 344 (imageObject -> OPIMOBJ IMDATA CLIMOBJ .)
-    OPIMOBJ         reduce using rule 344 (imageObject -> OPIMOBJ IMDATA CLIMOBJ .)
+    CLHEAD          reduce using rule 379 (genHFB -> row genHFB .)
+    CLFOOT          reduce using rule 379 (genHFB -> row genHFB .)
+    CLBODY          reduce using rule 379 (genHFB -> row genHFB .)
 
 
 state 475
 
-    (377) thead -> OPHEAD genHFB CLHEAD .
+    (380) row -> OPROW genrow . CLROW
 
-    CLTGROUP        reduce using rule 377 (thead -> OPHEAD genHFB CLHEAD .)
+    CLROW           shift and go to state 497
 
 
 state 476
 
-    (381) genHFB -> row genHFB .
+    (381) genrow -> entry .
+    (382) genrow -> entry . genrow
+    (381) genrow -> . entry
+    (382) genrow -> . entry genrow
+    (383) entry -> . OPENTRY genentry CLENTRY
 
-    CLHEAD          reduce using rule 381 (genHFB -> row genHFB .)
-    CLFOOT          reduce using rule 381 (genHFB -> row genHFB .)
-    CLBODY          reduce using rule 381 (genHFB -> row genHFB .)
+    CLROW           reduce using rule 381 (genrow -> entry .)
+    OPENTRY         shift and go to state 477
 
+    entry                          shift and go to state 476
+    genrow                         shift and go to state 498
 
 state 477
 
-    (382) row -> OPROW genrow . CLROW
-
-    CLROW           shift and go to state 499
-
-
-state 478
-
-    (383) genrow -> entry .
-    (384) genrow -> entry . genrow
-    (383) genrow -> . entry
-    (384) genrow -> . entry genrow
-    (385) entry -> . OPENTRY genentry CLENTRY
-
-    CLROW           reduce using rule 383 (genrow -> entry .)
-    OPENTRY         shift and go to state 479
-
-    entry                          shift and go to state 478
-    genrow                         shift and go to state 500
-
-state 479
-
-    (385) entry -> OPENTRY . genentry CLENTRY
-    (386) genentry -> . TEXTO
-    (387) genentry -> . itemizedList
-    (388) genentry -> . important
-    (389) genentry -> . para
-    (390) genentry -> . simpara
-    (391) genentry -> . address
-    (392) genentry -> . comment
-    (393) genentry -> . abstract
-    (394) genentry -> . TEXTO genentry
-    (395) genentry -> . itemizedList genentry
-    (396) genentry -> . important genentry
-    (397) genentry -> . para genentry
-    (398) genentry -> . simpara genentry
-    (399) genentry -> . address genentry
-    (400) genentry -> . comment genentry
-    (401) genentry -> . abstract genentry
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (383) entry -> OPENTRY . genentry CLENTRY
+    (384) genentry -> . TEXTO
+    (385) genentry -> . itemizedList
+    (386) genentry -> . important
+    (387) genentry -> . para
+    (388) genentry -> . simpara
+    (389) genentry -> . address
+    (390) genentry -> . comment
+    (391) genentry -> . abstract
+    (392) genentry -> . TEXTO genentry
+    (393) genentry -> . itemizedList genentry
+    (394) genentry -> . important genentry
+    (395) genentry -> . para genentry
+    (396) genentry -> . simpara genentry
+    (397) genentry -> . address genentry
+    (398) genentry -> . comment genentry
+    (399) genentry -> . abstract genentry
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -11834,7 +11790,7 @@ state 479
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    TEXTO           shift and go to state 502
+    TEXTO           shift and go to state 500
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -11843,30 +11799,30 @@ state 479
     OPCOM           shift and go to state 25
     OPABST          shift and go to state 26
 
-    genentry                       shift and go to state 501
-    itemizedList                   shift and go to state 503
-    important                      shift and go to state 504
-    para                           shift and go to state 505
-    simpara                        shift and go to state 506
-    address                        shift and go to state 507
-    comment                        shift and go to state 508
-    abstract                       shift and go to state 509
+    genentry                       shift and go to state 499
+    itemizedList                   shift and go to state 501
+    important                      shift and go to state 502
+    para                           shift and go to state 503
+    simpara                        shift and go to state 504
+    address                        shift and go to state 505
+    comment                        shift and go to state 506
+    abstract                       shift and go to state 507
+
+state 478
+
+    (376) tfoot -> OPFOOT genHFB CLFOOT .
+
+    CLTGROUP        reduce using rule 376 (tfoot -> OPFOOT genHFB CLFOOT .)
+
+
+state 479
+
+    (377) tbody -> OPBODY genHFB CLBODY .
+
+    CLTGROUP        reduce using rule 377 (tbody -> OPBODY genHFB CLBODY .)
+
 
 state 480
-
-    (378) tfoot -> OPFOOT genHFB CLFOOT .
-
-    CLTGROUP        reduce using rule 378 (tfoot -> OPFOOT genHFB CLFOOT .)
-
-
-state 481
-
-    (379) tbody -> OPBODY genHFB CLBODY .
-
-    CLTGROUP        reduce using rule 379 (tbody -> OPBODY genHFB CLBODY .)
-
-
-state 482
 
     (36) section -> OPSECT info genSect1 genSect2 CLSECT .
 
@@ -11875,7 +11831,7 @@ state 482
     CLSECT          reduce using rule 36 (section -> OPSECT info genSect1 genSect2 CLSECT .)
 
 
-state 483
+state 481
 
     (40) section -> OPSECT info genSect1 genSect3 CLSECT .
 
@@ -11884,7 +11840,7 @@ state 483
     CLSECT          reduce using rule 40 (section -> OPSECT info genSect1 genSect3 CLSECT .)
 
 
-state 484
+state 482
 
     (34) section -> OPSECT info title genSect1 CLSECT .
 
@@ -11893,21 +11849,21 @@ state 484
     CLSECT          reduce using rule 34 (section -> OPSECT info title genSect1 CLSECT .)
 
 
-state 485
+state 483
 
     (38) section -> OPSECT info title genSect1 genSect2 . CLSECT
 
-    CLSECT          shift and go to state 510
+    CLSECT          shift and go to state 508
 
 
-state 486
+state 484
 
     (42) section -> OPSECT info title genSect1 genSect3 . CLSECT
 
-    CLSECT          shift and go to state 511
+    CLSECT          shift and go to state 509
 
 
-state 487
+state 485
 
     (37) section -> OPSECT title genSect1 genSect2 CLSECT .
 
@@ -11916,7 +11872,7 @@ state 487
     CLSECT          reduce using rule 37 (section -> OPSECT title genSect1 genSect2 CLSECT .)
 
 
-state 488
+state 486
 
     (41) section -> OPSECT title genSect1 genSect3 CLSECT .
 
@@ -11925,7 +11881,7 @@ state 488
     CLSECT          reduce using rule 41 (section -> OPSECT title genSect1 genSect3 CLSECT .)
 
 
-state 489
+state 487
 
     (68) simpleSec -> OPSSECT info title genSSect CLSSECT .
 
@@ -11934,7 +11890,7 @@ state 489
     CLSECT          reduce using rule 68 (simpleSec -> OPSSECT info title genSSect CLSSECT .)
 
 
-state 490
+state 488
 
     (319) holder -> OPHOLDER genholder CLHOLDER .
 
@@ -11942,35 +11898,35 @@ state 490
     CLCOPY          reduce using rule 319 (holder -> OPHOLDER genholder CLHOLDER .)
 
 
-state 491
+state 489
 
     (324) genholder -> TEXTO genholder .
 
     CLHOLDER        reduce using rule 324 (genholder -> TEXTO genholder .)
 
 
-state 492
+state 490
 
     (325) genholder -> link genholder .
 
     CLHOLDER        reduce using rule 325 (genholder -> link genholder .)
 
 
-state 493
+state 491
 
     (326) genholder -> emphasis genholder .
 
     CLHOLDER        reduce using rule 326 (genholder -> emphasis genholder .)
 
 
-state 494
+state 492
 
     (327) genholder -> comment genholder .
 
     CLHOLDER        reduce using rule 327 (genholder -> comment genholder .)
 
 
-state 495
+state 493
 
     (332) mediaObject -> OPMOBJ info videoObject genMO CLMOBJ .
 
@@ -12001,7 +11957,7 @@ state 495
     CLLITEM         reduce using rule 332 (mediaObject -> OPMOBJ info videoObject genMO CLMOBJ .)
 
 
-state 496
+state 494
 
     (333) mediaObject -> OPMOBJ info imageObject genMO CLMOBJ .
 
@@ -12032,69 +11988,169 @@ state 496
     CLLITEM         reduce using rule 333 (mediaObject -> OPMOBJ info imageObject genMO CLMOBJ .)
 
 
+state 495
+
+    (344) videoObject -> OPVOBJ info VIDAT CLVOBJ .
+
+    CLMOBJ          reduce using rule 344 (videoObject -> OPVOBJ info VIDAT CLVOBJ .)
+    OPVOBJ          reduce using rule 344 (videoObject -> OPVOBJ info VIDAT CLVOBJ .)
+    OPIMOBJ         reduce using rule 344 (videoObject -> OPVOBJ info VIDAT CLVOBJ .)
+
+
+state 496
+
+    (346) imageObject -> OPIMOBJ info IMDATA CLIMOBJ .
+
+    CLMOBJ          reduce using rule 346 (imageObject -> OPIMOBJ info IMDATA CLIMOBJ .)
+    OPVOBJ          reduce using rule 346 (imageObject -> OPIMOBJ info IMDATA CLIMOBJ .)
+    OPIMOBJ         reduce using rule 346 (imageObject -> OPIMOBJ info IMDATA CLIMOBJ .)
+
+
 state 497
 
-    (342) videoObject -> OPVOBJ info VIDAT CLVOBJ .
+    (380) row -> OPROW genrow CLROW .
 
-    CLMOBJ          reduce using rule 342 (videoObject -> OPVOBJ info VIDAT CLVOBJ .)
-    OPVOBJ          reduce using rule 342 (videoObject -> OPVOBJ info VIDAT CLVOBJ .)
-    OPIMOBJ         reduce using rule 342 (videoObject -> OPVOBJ info VIDAT CLVOBJ .)
+    OPROW           reduce using rule 380 (row -> OPROW genrow CLROW .)
+    CLHEAD          reduce using rule 380 (row -> OPROW genrow CLROW .)
+    CLFOOT          reduce using rule 380 (row -> OPROW genrow CLROW .)
+    CLBODY          reduce using rule 380 (row -> OPROW genrow CLROW .)
 
 
 state 498
 
-    (345) imageObject -> OPIMOBJ info IMDATA CLIMOBJ .
+    (382) genrow -> entry genrow .
 
-    CLMOBJ          reduce using rule 345 (imageObject -> OPIMOBJ info IMDATA CLIMOBJ .)
-    OPVOBJ          reduce using rule 345 (imageObject -> OPIMOBJ info IMDATA CLIMOBJ .)
-    OPIMOBJ         reduce using rule 345 (imageObject -> OPIMOBJ info IMDATA CLIMOBJ .)
+    CLROW           reduce using rule 382 (genrow -> entry genrow .)
 
 
 state 499
 
-    (382) row -> OPROW genrow CLROW .
+    (383) entry -> OPENTRY genentry . CLENTRY
 
-    OPROW           reduce using rule 382 (row -> OPROW genrow CLROW .)
-    CLHEAD          reduce using rule 382 (row -> OPROW genrow CLROW .)
-    CLFOOT          reduce using rule 382 (row -> OPROW genrow CLROW .)
-    CLBODY          reduce using rule 382 (row -> OPROW genrow CLROW .)
+    CLENTRY         shift and go to state 510
 
 
 state 500
 
-    (384) genrow -> entry genrow .
+    (384) genentry -> TEXTO .
+    (392) genentry -> TEXTO . genentry
+    (384) genentry -> . TEXTO
+    (385) genentry -> . itemizedList
+    (386) genentry -> . important
+    (387) genentry -> . para
+    (388) genentry -> . simpara
+    (389) genentry -> . address
+    (390) genentry -> . comment
+    (391) genentry -> . abstract
+    (392) genentry -> . TEXTO genentry
+    (393) genentry -> . itemizedList genentry
+    (394) genentry -> . important genentry
+    (395) genentry -> . para genentry
+    (396) genentry -> . simpara genentry
+    (397) genentry -> . address genentry
+    (398) genentry -> . comment genentry
+    (399) genentry -> . abstract genentry
+    (340) itemizedList -> . OPILIST genIList CLILIST
+    (218) important -> . OPIMPORT title genImport CLIMPORT
+    (219) important -> . OPIMPORT genImport CLIMPORT
+    (195) para -> . OPPARA genpara CLPARA
+    (143) simpara -> . OPSPARA genSpara CLSPARA
+    (109) address -> . OPADD CLADD
+    (110) address -> . OPADD genAdd CLADD
+    (169) comment -> . OPCOM genCom CLCOM
+    (103) abstract -> . OPABST title genAbstr CLABST
+    (104) abstract -> . OPABST genAbstr CLABST
 
-    CLROW           reduce using rule 384 (genrow -> entry genrow .)
+    CLENTRY         reduce using rule 384 (genentry -> TEXTO .)
+    TEXTO           shift and go to state 500
+    OPILIST         shift and go to state 19
+    OPIMPORT        shift and go to state 20
+    OPPARA          shift and go to state 21
+    OPSPARA         shift and go to state 22
+    OPADD           shift and go to state 23
+    OPCOM           shift and go to state 25
+    OPABST          shift and go to state 26
 
+    genentry                       shift and go to state 511
+    itemizedList                   shift and go to state 501
+    important                      shift and go to state 502
+    para                           shift and go to state 503
+    simpara                        shift and go to state 504
+    address                        shift and go to state 505
+    comment                        shift and go to state 506
+    abstract                       shift and go to state 507
 
 state 501
 
-    (385) entry -> OPENTRY genentry . CLENTRY
+    (385) genentry -> itemizedList .
+    (393) genentry -> itemizedList . genentry
+    (384) genentry -> . TEXTO
+    (385) genentry -> . itemizedList
+    (386) genentry -> . important
+    (387) genentry -> . para
+    (388) genentry -> . simpara
+    (389) genentry -> . address
+    (390) genentry -> . comment
+    (391) genentry -> . abstract
+    (392) genentry -> . TEXTO genentry
+    (393) genentry -> . itemizedList genentry
+    (394) genentry -> . important genentry
+    (395) genentry -> . para genentry
+    (396) genentry -> . simpara genentry
+    (397) genentry -> . address genentry
+    (398) genentry -> . comment genentry
+    (399) genentry -> . abstract genentry
+    (340) itemizedList -> . OPILIST genIList CLILIST
+    (218) important -> . OPIMPORT title genImport CLIMPORT
+    (219) important -> . OPIMPORT genImport CLIMPORT
+    (195) para -> . OPPARA genpara CLPARA
+    (143) simpara -> . OPSPARA genSpara CLSPARA
+    (109) address -> . OPADD CLADD
+    (110) address -> . OPADD genAdd CLADD
+    (169) comment -> . OPCOM genCom CLCOM
+    (103) abstract -> . OPABST title genAbstr CLABST
+    (104) abstract -> . OPABST genAbstr CLABST
 
-    CLENTRY         shift and go to state 512
+    CLENTRY         reduce using rule 385 (genentry -> itemizedList .)
+    TEXTO           shift and go to state 500
+    OPILIST         shift and go to state 19
+    OPIMPORT        shift and go to state 20
+    OPPARA          shift and go to state 21
+    OPSPARA         shift and go to state 22
+    OPADD           shift and go to state 23
+    OPCOM           shift and go to state 25
+    OPABST          shift and go to state 26
 
+    itemizedList                   shift and go to state 501
+    genentry                       shift and go to state 512
+    important                      shift and go to state 502
+    para                           shift and go to state 503
+    simpara                        shift and go to state 504
+    address                        shift and go to state 505
+    comment                        shift and go to state 506
+    abstract                       shift and go to state 507
 
 state 502
 
-    (386) genentry -> TEXTO .
-    (394) genentry -> TEXTO . genentry
-    (386) genentry -> . TEXTO
-    (387) genentry -> . itemizedList
-    (388) genentry -> . important
-    (389) genentry -> . para
-    (390) genentry -> . simpara
-    (391) genentry -> . address
-    (392) genentry -> . comment
-    (393) genentry -> . abstract
-    (394) genentry -> . TEXTO genentry
-    (395) genentry -> . itemizedList genentry
-    (396) genentry -> . important genentry
-    (397) genentry -> . para genentry
-    (398) genentry -> . simpara genentry
-    (399) genentry -> . address genentry
-    (400) genentry -> . comment genentry
-    (401) genentry -> . abstract genentry
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (386) genentry -> important .
+    (394) genentry -> important . genentry
+    (384) genentry -> . TEXTO
+    (385) genentry -> . itemizedList
+    (386) genentry -> . important
+    (387) genentry -> . para
+    (388) genentry -> . simpara
+    (389) genentry -> . address
+    (390) genentry -> . comment
+    (391) genentry -> . abstract
+    (392) genentry -> . TEXTO genentry
+    (393) genentry -> . itemizedList genentry
+    (394) genentry -> . important genentry
+    (395) genentry -> . para genentry
+    (396) genentry -> . simpara genentry
+    (397) genentry -> . address genentry
+    (398) genentry -> . comment genentry
+    (399) genentry -> . abstract genentry
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -12105,8 +12161,8 @@ state 502
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    CLENTRY         reduce using rule 386 (genentry -> TEXTO .)
-    TEXTO           shift and go to state 502
+    CLENTRY         reduce using rule 386 (genentry -> important .)
+    TEXTO           shift and go to state 500
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -12115,36 +12171,36 @@ state 502
     OPCOM           shift and go to state 25
     OPABST          shift and go to state 26
 
+    important                      shift and go to state 502
     genentry                       shift and go to state 513
-    itemizedList                   shift and go to state 503
-    important                      shift and go to state 504
-    para                           shift and go to state 505
-    simpara                        shift and go to state 506
-    address                        shift and go to state 507
-    comment                        shift and go to state 508
-    abstract                       shift and go to state 509
+    itemizedList                   shift and go to state 501
+    para                           shift and go to state 503
+    simpara                        shift and go to state 504
+    address                        shift and go to state 505
+    comment                        shift and go to state 506
+    abstract                       shift and go to state 507
 
 state 503
 
-    (387) genentry -> itemizedList .
-    (395) genentry -> itemizedList . genentry
-    (386) genentry -> . TEXTO
-    (387) genentry -> . itemizedList
-    (388) genentry -> . important
-    (389) genentry -> . para
-    (390) genentry -> . simpara
-    (391) genentry -> . address
-    (392) genentry -> . comment
-    (393) genentry -> . abstract
-    (394) genentry -> . TEXTO genentry
-    (395) genentry -> . itemizedList genentry
-    (396) genentry -> . important genentry
-    (397) genentry -> . para genentry
-    (398) genentry -> . simpara genentry
-    (399) genentry -> . address genentry
-    (400) genentry -> . comment genentry
-    (401) genentry -> . abstract genentry
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (387) genentry -> para .
+    (395) genentry -> para . genentry
+    (384) genentry -> . TEXTO
+    (385) genentry -> . itemizedList
+    (386) genentry -> . important
+    (387) genentry -> . para
+    (388) genentry -> . simpara
+    (389) genentry -> . address
+    (390) genentry -> . comment
+    (391) genentry -> . abstract
+    (392) genentry -> . TEXTO genentry
+    (393) genentry -> . itemizedList genentry
+    (394) genentry -> . important genentry
+    (395) genentry -> . para genentry
+    (396) genentry -> . simpara genentry
+    (397) genentry -> . address genentry
+    (398) genentry -> . comment genentry
+    (399) genentry -> . abstract genentry
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -12155,8 +12211,8 @@ state 503
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    CLENTRY         reduce using rule 387 (genentry -> itemizedList .)
-    TEXTO           shift and go to state 502
+    CLENTRY         reduce using rule 387 (genentry -> para .)
+    TEXTO           shift and go to state 500
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -12165,36 +12221,36 @@ state 503
     OPCOM           shift and go to state 25
     OPABST          shift and go to state 26
 
-    itemizedList                   shift and go to state 503
+    para                           shift and go to state 503
     genentry                       shift and go to state 514
-    important                      shift and go to state 504
-    para                           shift and go to state 505
-    simpara                        shift and go to state 506
-    address                        shift and go to state 507
-    comment                        shift and go to state 508
-    abstract                       shift and go to state 509
+    itemizedList                   shift and go to state 501
+    important                      shift and go to state 502
+    simpara                        shift and go to state 504
+    address                        shift and go to state 505
+    comment                        shift and go to state 506
+    abstract                       shift and go to state 507
 
 state 504
 
-    (388) genentry -> important .
-    (396) genentry -> important . genentry
-    (386) genentry -> . TEXTO
-    (387) genentry -> . itemizedList
-    (388) genentry -> . important
-    (389) genentry -> . para
-    (390) genentry -> . simpara
-    (391) genentry -> . address
-    (392) genentry -> . comment
-    (393) genentry -> . abstract
-    (394) genentry -> . TEXTO genentry
-    (395) genentry -> . itemizedList genentry
-    (396) genentry -> . important genentry
-    (397) genentry -> . para genentry
-    (398) genentry -> . simpara genentry
-    (399) genentry -> . address genentry
-    (400) genentry -> . comment genentry
-    (401) genentry -> . abstract genentry
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (388) genentry -> simpara .
+    (396) genentry -> simpara . genentry
+    (384) genentry -> . TEXTO
+    (385) genentry -> . itemizedList
+    (386) genentry -> . important
+    (387) genentry -> . para
+    (388) genentry -> . simpara
+    (389) genentry -> . address
+    (390) genentry -> . comment
+    (391) genentry -> . abstract
+    (392) genentry -> . TEXTO genentry
+    (393) genentry -> . itemizedList genentry
+    (394) genentry -> . important genentry
+    (395) genentry -> . para genentry
+    (396) genentry -> . simpara genentry
+    (397) genentry -> . address genentry
+    (398) genentry -> . comment genentry
+    (399) genentry -> . abstract genentry
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -12205,8 +12261,8 @@ state 504
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    CLENTRY         reduce using rule 388 (genentry -> important .)
-    TEXTO           shift and go to state 502
+    CLENTRY         reduce using rule 388 (genentry -> simpara .)
+    TEXTO           shift and go to state 500
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -12215,36 +12271,36 @@ state 504
     OPCOM           shift and go to state 25
     OPABST          shift and go to state 26
 
-    important                      shift and go to state 504
+    simpara                        shift and go to state 504
     genentry                       shift and go to state 515
-    itemizedList                   shift and go to state 503
-    para                           shift and go to state 505
-    simpara                        shift and go to state 506
-    address                        shift and go to state 507
-    comment                        shift and go to state 508
-    abstract                       shift and go to state 509
+    itemizedList                   shift and go to state 501
+    important                      shift and go to state 502
+    para                           shift and go to state 503
+    address                        shift and go to state 505
+    comment                        shift and go to state 506
+    abstract                       shift and go to state 507
 
 state 505
 
-    (389) genentry -> para .
-    (397) genentry -> para . genentry
-    (386) genentry -> . TEXTO
-    (387) genentry -> . itemizedList
-    (388) genentry -> . important
-    (389) genentry -> . para
-    (390) genentry -> . simpara
-    (391) genentry -> . address
-    (392) genentry -> . comment
-    (393) genentry -> . abstract
-    (394) genentry -> . TEXTO genentry
-    (395) genentry -> . itemizedList genentry
-    (396) genentry -> . important genentry
-    (397) genentry -> . para genentry
-    (398) genentry -> . simpara genentry
-    (399) genentry -> . address genentry
-    (400) genentry -> . comment genentry
-    (401) genentry -> . abstract genentry
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (389) genentry -> address .
+    (397) genentry -> address . genentry
+    (384) genentry -> . TEXTO
+    (385) genentry -> . itemizedList
+    (386) genentry -> . important
+    (387) genentry -> . para
+    (388) genentry -> . simpara
+    (389) genentry -> . address
+    (390) genentry -> . comment
+    (391) genentry -> . abstract
+    (392) genentry -> . TEXTO genentry
+    (393) genentry -> . itemizedList genentry
+    (394) genentry -> . important genentry
+    (395) genentry -> . para genentry
+    (396) genentry -> . simpara genentry
+    (397) genentry -> . address genentry
+    (398) genentry -> . comment genentry
+    (399) genentry -> . abstract genentry
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -12255,8 +12311,8 @@ state 505
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    CLENTRY         reduce using rule 389 (genentry -> para .)
-    TEXTO           shift and go to state 502
+    CLENTRY         reduce using rule 389 (genentry -> address .)
+    TEXTO           shift and go to state 500
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -12265,36 +12321,36 @@ state 505
     OPCOM           shift and go to state 25
     OPABST          shift and go to state 26
 
-    para                           shift and go to state 505
+    address                        shift and go to state 505
     genentry                       shift and go to state 516
-    itemizedList                   shift and go to state 503
-    important                      shift and go to state 504
-    simpara                        shift and go to state 506
-    address                        shift and go to state 507
-    comment                        shift and go to state 508
-    abstract                       shift and go to state 509
+    itemizedList                   shift and go to state 501
+    important                      shift and go to state 502
+    para                           shift and go to state 503
+    simpara                        shift and go to state 504
+    comment                        shift and go to state 506
+    abstract                       shift and go to state 507
 
 state 506
 
-    (390) genentry -> simpara .
-    (398) genentry -> simpara . genentry
-    (386) genentry -> . TEXTO
-    (387) genentry -> . itemizedList
-    (388) genentry -> . important
-    (389) genentry -> . para
-    (390) genentry -> . simpara
-    (391) genentry -> . address
-    (392) genentry -> . comment
-    (393) genentry -> . abstract
-    (394) genentry -> . TEXTO genentry
-    (395) genentry -> . itemizedList genentry
-    (396) genentry -> . important genentry
-    (397) genentry -> . para genentry
-    (398) genentry -> . simpara genentry
-    (399) genentry -> . address genentry
-    (400) genentry -> . comment genentry
-    (401) genentry -> . abstract genentry
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (390) genentry -> comment .
+    (398) genentry -> comment . genentry
+    (384) genentry -> . TEXTO
+    (385) genentry -> . itemizedList
+    (386) genentry -> . important
+    (387) genentry -> . para
+    (388) genentry -> . simpara
+    (389) genentry -> . address
+    (390) genentry -> . comment
+    (391) genentry -> . abstract
+    (392) genentry -> . TEXTO genentry
+    (393) genentry -> . itemizedList genentry
+    (394) genentry -> . important genentry
+    (395) genentry -> . para genentry
+    (396) genentry -> . simpara genentry
+    (397) genentry -> . address genentry
+    (398) genentry -> . comment genentry
+    (399) genentry -> . abstract genentry
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -12305,8 +12361,8 @@ state 506
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    CLENTRY         reduce using rule 390 (genentry -> simpara .)
-    TEXTO           shift and go to state 502
+    CLENTRY         reduce using rule 390 (genentry -> comment .)
+    TEXTO           shift and go to state 500
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -12315,36 +12371,36 @@ state 506
     OPCOM           shift and go to state 25
     OPABST          shift and go to state 26
 
-    simpara                        shift and go to state 506
+    comment                        shift and go to state 506
     genentry                       shift and go to state 517
-    itemizedList                   shift and go to state 503
-    important                      shift and go to state 504
-    para                           shift and go to state 505
-    address                        shift and go to state 507
-    comment                        shift and go to state 508
-    abstract                       shift and go to state 509
+    itemizedList                   shift and go to state 501
+    important                      shift and go to state 502
+    para                           shift and go to state 503
+    simpara                        shift and go to state 504
+    address                        shift and go to state 505
+    abstract                       shift and go to state 507
 
 state 507
 
-    (391) genentry -> address .
-    (399) genentry -> address . genentry
-    (386) genentry -> . TEXTO
-    (387) genentry -> . itemizedList
-    (388) genentry -> . important
-    (389) genentry -> . para
-    (390) genentry -> . simpara
-    (391) genentry -> . address
-    (392) genentry -> . comment
-    (393) genentry -> . abstract
-    (394) genentry -> . TEXTO genentry
-    (395) genentry -> . itemizedList genentry
-    (396) genentry -> . important genentry
-    (397) genentry -> . para genentry
-    (398) genentry -> . simpara genentry
-    (399) genentry -> . address genentry
-    (400) genentry -> . comment genentry
-    (401) genentry -> . abstract genentry
-    (346) itemizedList -> . OPILIST genIList CLILIST
+    (391) genentry -> abstract .
+    (399) genentry -> abstract . genentry
+    (384) genentry -> . TEXTO
+    (385) genentry -> . itemizedList
+    (386) genentry -> . important
+    (387) genentry -> . para
+    (388) genentry -> . simpara
+    (389) genentry -> . address
+    (390) genentry -> . comment
+    (391) genentry -> . abstract
+    (392) genentry -> . TEXTO genentry
+    (393) genentry -> . itemizedList genentry
+    (394) genentry -> . important genentry
+    (395) genentry -> . para genentry
+    (396) genentry -> . simpara genentry
+    (397) genentry -> . address genentry
+    (398) genentry -> . comment genentry
+    (399) genentry -> . abstract genentry
+    (340) itemizedList -> . OPILIST genIList CLILIST
     (218) important -> . OPIMPORT title genImport CLIMPORT
     (219) important -> . OPIMPORT genImport CLIMPORT
     (195) para -> . OPPARA genpara CLPARA
@@ -12355,8 +12411,8 @@ state 507
     (103) abstract -> . OPABST title genAbstr CLABST
     (104) abstract -> . OPABST genAbstr CLABST
 
-    CLENTRY         reduce using rule 391 (genentry -> address .)
-    TEXTO           shift and go to state 502
+    CLENTRY         reduce using rule 391 (genentry -> abstract .)
+    TEXTO           shift and go to state 500
     OPILIST         shift and go to state 19
     OPIMPORT        shift and go to state 20
     OPPARA          shift and go to state 21
@@ -12365,116 +12421,16 @@ state 507
     OPCOM           shift and go to state 25
     OPABST          shift and go to state 26
 
-    address                        shift and go to state 507
+    abstract                       shift and go to state 507
     genentry                       shift and go to state 518
-    itemizedList                   shift and go to state 503
-    important                      shift and go to state 504
-    para                           shift and go to state 505
-    simpara                        shift and go to state 506
-    comment                        shift and go to state 508
-    abstract                       shift and go to state 509
+    itemizedList                   shift and go to state 501
+    important                      shift and go to state 502
+    para                           shift and go to state 503
+    simpara                        shift and go to state 504
+    address                        shift and go to state 505
+    comment                        shift and go to state 506
 
 state 508
-
-    (392) genentry -> comment .
-    (400) genentry -> comment . genentry
-    (386) genentry -> . TEXTO
-    (387) genentry -> . itemizedList
-    (388) genentry -> . important
-    (389) genentry -> . para
-    (390) genentry -> . simpara
-    (391) genentry -> . address
-    (392) genentry -> . comment
-    (393) genentry -> . abstract
-    (394) genentry -> . TEXTO genentry
-    (395) genentry -> . itemizedList genentry
-    (396) genentry -> . important genentry
-    (397) genentry -> . para genentry
-    (398) genentry -> . simpara genentry
-    (399) genentry -> . address genentry
-    (400) genentry -> . comment genentry
-    (401) genentry -> . abstract genentry
-    (346) itemizedList -> . OPILIST genIList CLILIST
-    (218) important -> . OPIMPORT title genImport CLIMPORT
-    (219) important -> . OPIMPORT genImport CLIMPORT
-    (195) para -> . OPPARA genpara CLPARA
-    (143) simpara -> . OPSPARA genSpara CLSPARA
-    (109) address -> . OPADD CLADD
-    (110) address -> . OPADD genAdd CLADD
-    (169) comment -> . OPCOM genCom CLCOM
-    (103) abstract -> . OPABST title genAbstr CLABST
-    (104) abstract -> . OPABST genAbstr CLABST
-
-    CLENTRY         reduce using rule 392 (genentry -> comment .)
-    TEXTO           shift and go to state 502
-    OPILIST         shift and go to state 19
-    OPIMPORT        shift and go to state 20
-    OPPARA          shift and go to state 21
-    OPSPARA         shift and go to state 22
-    OPADD           shift and go to state 23
-    OPCOM           shift and go to state 25
-    OPABST          shift and go to state 26
-
-    comment                        shift and go to state 508
-    genentry                       shift and go to state 519
-    itemizedList                   shift and go to state 503
-    important                      shift and go to state 504
-    para                           shift and go to state 505
-    simpara                        shift and go to state 506
-    address                        shift and go to state 507
-    abstract                       shift and go to state 509
-
-state 509
-
-    (393) genentry -> abstract .
-    (401) genentry -> abstract . genentry
-    (386) genentry -> . TEXTO
-    (387) genentry -> . itemizedList
-    (388) genentry -> . important
-    (389) genentry -> . para
-    (390) genentry -> . simpara
-    (391) genentry -> . address
-    (392) genentry -> . comment
-    (393) genentry -> . abstract
-    (394) genentry -> . TEXTO genentry
-    (395) genentry -> . itemizedList genentry
-    (396) genentry -> . important genentry
-    (397) genentry -> . para genentry
-    (398) genentry -> . simpara genentry
-    (399) genentry -> . address genentry
-    (400) genentry -> . comment genentry
-    (401) genentry -> . abstract genentry
-    (346) itemizedList -> . OPILIST genIList CLILIST
-    (218) important -> . OPIMPORT title genImport CLIMPORT
-    (219) important -> . OPIMPORT genImport CLIMPORT
-    (195) para -> . OPPARA genpara CLPARA
-    (143) simpara -> . OPSPARA genSpara CLSPARA
-    (109) address -> . OPADD CLADD
-    (110) address -> . OPADD genAdd CLADD
-    (169) comment -> . OPCOM genCom CLCOM
-    (103) abstract -> . OPABST title genAbstr CLABST
-    (104) abstract -> . OPABST genAbstr CLABST
-
-    CLENTRY         reduce using rule 393 (genentry -> abstract .)
-    TEXTO           shift and go to state 502
-    OPILIST         shift and go to state 19
-    OPIMPORT        shift and go to state 20
-    OPPARA          shift and go to state 21
-    OPSPARA         shift and go to state 22
-    OPADD           shift and go to state 23
-    OPCOM           shift and go to state 25
-    OPABST          shift and go to state 26
-
-    abstract                       shift and go to state 509
-    genentry                       shift and go to state 520
-    itemizedList                   shift and go to state 503
-    important                      shift and go to state 504
-    para                           shift and go to state 505
-    simpara                        shift and go to state 506
-    address                        shift and go to state 507
-    comment                        shift and go to state 508
-
-state 510
 
     (38) section -> OPSECT info title genSect1 genSect2 CLSECT .
 
@@ -12483,7 +12439,7 @@ state 510
     CLSECT          reduce using rule 38 (section -> OPSECT info title genSect1 genSect2 CLSECT .)
 
 
-state 511
+state 509
 
     (42) section -> OPSECT info title genSect1 genSect3 CLSECT .
 
@@ -12492,66 +12448,66 @@ state 511
     CLSECT          reduce using rule 42 (section -> OPSECT info title genSect1 genSect3 CLSECT .)
 
 
+state 510
+
+    (383) entry -> OPENTRY genentry CLENTRY .
+
+    OPENTRY         reduce using rule 383 (entry -> OPENTRY genentry CLENTRY .)
+    CLROW           reduce using rule 383 (entry -> OPENTRY genentry CLENTRY .)
+
+
+state 511
+
+    (392) genentry -> TEXTO genentry .
+
+    CLENTRY         reduce using rule 392 (genentry -> TEXTO genentry .)
+
+
 state 512
 
-    (385) entry -> OPENTRY genentry CLENTRY .
+    (393) genentry -> itemizedList genentry .
 
-    OPENTRY         reduce using rule 385 (entry -> OPENTRY genentry CLENTRY .)
-    CLROW           reduce using rule 385 (entry -> OPENTRY genentry CLENTRY .)
+    CLENTRY         reduce using rule 393 (genentry -> itemizedList genentry .)
 
 
 state 513
 
-    (394) genentry -> TEXTO genentry .
+    (394) genentry -> important genentry .
 
-    CLENTRY         reduce using rule 394 (genentry -> TEXTO genentry .)
+    CLENTRY         reduce using rule 394 (genentry -> important genentry .)
 
 
 state 514
 
-    (395) genentry -> itemizedList genentry .
+    (395) genentry -> para genentry .
 
-    CLENTRY         reduce using rule 395 (genentry -> itemizedList genentry .)
+    CLENTRY         reduce using rule 395 (genentry -> para genentry .)
 
 
 state 515
 
-    (396) genentry -> important genentry .
+    (396) genentry -> simpara genentry .
 
-    CLENTRY         reduce using rule 396 (genentry -> important genentry .)
+    CLENTRY         reduce using rule 396 (genentry -> simpara genentry .)
 
 
 state 516
 
-    (397) genentry -> para genentry .
+    (397) genentry -> address genentry .
 
-    CLENTRY         reduce using rule 397 (genentry -> para genentry .)
+    CLENTRY         reduce using rule 397 (genentry -> address genentry .)
 
 
 state 517
 
-    (398) genentry -> simpara genentry .
+    (398) genentry -> comment genentry .
 
-    CLENTRY         reduce using rule 398 (genentry -> simpara genentry .)
+    CLENTRY         reduce using rule 398 (genentry -> comment genentry .)
 
 
 state 518
 
-    (399) genentry -> address genentry .
+    (399) genentry -> abstract genentry .
 
-    CLENTRY         reduce using rule 399 (genentry -> address genentry .)
-
-
-state 519
-
-    (400) genentry -> comment genentry .
-
-    CLENTRY         reduce using rule 400 (genentry -> comment genentry .)
-
-
-state 520
-
-    (401) genentry -> abstract genentry .
-
-    CLENTRY         reduce using rule 401 (genentry -> abstract genentry .)
+    CLENTRY         reduce using rule 399 (genentry -> abstract genentry .)
 
