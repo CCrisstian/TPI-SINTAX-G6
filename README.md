@@ -1,12 +1,14 @@
-**# Trabajo Practico Integrador** 
+**# Trabajo Practico Integrador**
+
 **# Diseño e implementaciónde Lexer y Parser**
+
 **## Grupo 6**
 
 **Integrantes**:
-          * Cristaldo, Cristian Alejandro
-          * Maldonado; Leandro Arian
-          * Luque Zacarias; Sebastian Maximiliano
-          * Elizeche; Nehuen
+          - Cristaldo, Cristian Alejandro
+         - Maldonado; Leandro Arian
+          - Luque Zacarias; Sebastian Maximiliano
+          - Elizeche; Nehuen
 
 **Asignatura**:   Sintaxis y Semántica de los Lenguajes
 
