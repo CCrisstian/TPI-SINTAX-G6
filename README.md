@@ -1,6 +1,6 @@
-                    Trabajo Practico Integrador 
-              Diseño e implementaciónde Lexer y Parser
-                            Grupo 6
+  Trabajo Practico Integrador 
+  Diseño e implementaciónde Lexer y Parser
+              Grupo 6
 
 Integrantes:
           * Cristaldo, Cristian Alejandro
