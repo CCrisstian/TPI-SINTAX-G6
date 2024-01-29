@@ -1,10 +1,9 @@
-# Trabajo Practico Integrador
+<h1>Trabajo Practico Integrador</h1>
 
-# Diseño e implementaciónde Lexer y Parser
+<h2>Diseño e implementaciónde Lexer y Parser (Grupo 6)</h2>
 
-## Grupo 6
+<p>Integrantes:</p>
 
-**Integrantes**:
 - Cristaldo, Cristian Alejandro
 - Maldonado; Leandro Arian
 - Luque Zacarias; Sebastian Maximiliano
